@@ -1,0 +1,90 @@
+.jianfei-wrap{
+    padding: 80px 0;
+    line-height: 1.7;
+    font-size: 17px;
+    color: #718398;
+}
+.jianfei-wrap h2{
+    margin: 0;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 100;
+    color: #27384D;
+    letter-spacing: 2px;
+}
+.jianfei-wrap .jianfei-desc .container p{
+    padding: 0 200px;
+    text-align: center;
+}
+.jianfei-wrap .jianfei-desc .container p b{
+    font-weight: lighter;
+}
+.jianfei-wrap .jianfei-desc .dimg{
+    padding: 95px 0 85px;
+}
+.jianfei-wrap .jianfei-desc .dimg img{
+    display: block;
+    width: 100%;
+    /*height: 494px;*/
+}
+
+.jianfei-wrap .jianfei-product .container p{
+    padding: 0 200px;
+    text-align: center;
+}
+.jianfei-wrap .jianfei-product .container .statistics{
+    padding: 74px 0 0;
+}
+.jianfei-wrap .jianfei-product .container .statistics ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.jianfei-wrap .jianfei-product .container .statistics ul li{
+    padding: 0 47px;
+}
+.jianfei-wrap .jianfei-product .container .statistics table{
+    margin: 54px auto 0;
+    width: 800px;
+    text-align: center;
+}
+.jianfei-wrap .jianfei-product .container .statistics table tr td{
+    padding: 10px 0;
+    font-weight: lighter;
+}
+.jianfei-wrap .jianfei-product .container .statistics table tr:first-child td{
+    font-weight: 400;
+}
+.jianfei-wrap .jianfei-product .container .product{
+    padding: 54px 0 0;
+    margin: 0 auto;
+    width: 1120px;
+}
+.jianfei-wrap .jianfei-product .container .product img{
+    display: block;
+    float: left;
+    width: 880px;
+    height: 400px;
+}
+.jianfei-wrap .jianfei-product .container .product .list{
+    float: right;
+    width: 200px;
+}
+.jianfei-wrap .jianfei-product .container .product .list h2{
+    padding: 0 0 30px;
+    line-height: 1;
+    text-align: left;
+}
+.jianfei-wrap .jianfei-product .container .product .list .conten{
+    width: 200px;
+    height: 322px;
+}
+.jianfei-wrap .jianfei-product .container .product .list .conten ul li{
+    padding: 4px 0;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

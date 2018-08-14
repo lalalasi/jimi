@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <title>微信登录</title>
+
+    <!--脚本加载-->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/aes.js"></script>
+    <script src="js/commonEncrypDecryp.js"></script>
+    <script src="js/mode-ecb.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/service.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(function () {
+        var redirectURI='http://www.geneme.com.cn/geneme/wechatlogin.html';
+        var appid='wx604a66f487decce5';
+        var state='11aadfe6ac1949bfa88aae2df784f6d4';
+
+        var codeStr = window.location.search.substring(1);
+        var map = toParamMap(codeStr);
+
+        if(map.state == null || map.code == null){
+            window.location.href='https://open.weixin.qq.com/connect/qrconnect?' +
+                'appid='+appid+'&redirect_uri='+encodeURIComponent(redirectURI)+'&response_type=code&scope=snsapi_login&state='+state+'#wechat_redirect';
+        } else {
+            if(map.state==state){
+                getAccessToken(map.code);
+            }
+        }
+    });
+
+    function getAccessToken(code) {
+        var post_url= url + '/pay!appUserWechatLogin.action';
+        $.ajax({
+            type: "POST",
+            url: post_url,
+            data: {'code':code},
+            dataType: "json",
+            success: function (data) {
+                if(data.status.code!=200){
+                    location.href = "login.html";
+                    return;
+                }
+
+                wechatLogin(data.result.unionid, 0);
+            }
+        });
+    }
+
+
+    function wechatLogin(openid, type) {
+        var post_url= url + '/userInfo!request.action';
+
+        var params = {
+            "userid": "",
+            "token": "",
+            "method": "thirdLogin",
+            "params": {
+                "uniqueId": openid,
+                "type": type
+            }
+        };
+
+        $.ajax({
+            type: "POST",
+            url: post_url,
+            data: toData(params),
+            dataType: "json",
+            success: function (data) {
+
+                //第一次登录跳转绑定手机号
+                if(data.status.code == 313){
+                    location.href = "otherBind.html?openid="+openid+"&type="+type;
+                    return;
+                }
+
+                if(data.status.code!=200){
+                    alert(data.status.message);
+                    return;
+                }
+
+                //不是第一次保存信息跳转首页
+                setUserInfo(data.result);
+                location.href = "index.html";
+            }
+        });
+    }
+
+
+    function toParamMap(str){
+        var map = {};
+        var segs = str.split("&");
+        for(var i in segs){
+            var seg = segs[i];
+            var idx = seg.indexOf('=');
+            if(idx < 0){
+                continue;
+            }
+            var name = seg.substring(0, idx);
+            var value = seg.substring(idx+1);
+            map[name] = value;
+        }
+        return map;
+    }
+
+</script>
+</body>
+</html>

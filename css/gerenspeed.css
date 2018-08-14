@@ -1,0 +1,132 @@
+.gerenspeed-warp{
+    padding: 50px 0;
+    background: #F4F7F9;
+}
+.gerenspeed-warp .container{
+    padding: 0 45px;
+}
+.gerenspeed-warp .left,.gerenspeed-warp .right{
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+.gerenspeed-warp .left{
+    padding: 0 10px;
+    width: 160px;
+    height: 400px;
+}
+.gerenspeed-warp .right{
+    margin-left: 30px;
+    width: 920px;
+    min-height: 400px;
+}
+.gerenspeed-warp .left ul{
+    margin-top: 46px;
+}
+.gerenspeed-warp .left ul li{
+    padding-bottom: 10px;
+}
+.gerenspeed-warp .left ul li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.gerenspeed-warp .left ul li a.active{
+    color: #ffffff;
+    background: #47ABF3;
+}
+
+.gerenspeed-warp .speedbox{
+    padding: 15px 70px;
+}
+.gerenspeed-warp .speedbox .item{
+    margin-top: 50px;
+}
+.gerenspeed-warp .speedbox .item .title{
+    padding: 16px 11px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+.gerenspeed-warp .speedbox .item .title i{
+    display: inline-block;
+    margin-top: -3px;
+    margin-right: 13px;
+    font-size: 28px;
+    font-weight: 100;
+    vertical-align: middle;
+}
+.gerenspeed-warp .speedbox .item .title i.blue{
+    color: #47ABF3;
+}
+.gerenspeed-warp .speedbox .item .title i.orange{
+    color: #FB8D56;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem{
+    padding: 20px 11px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.gerenspeed-warp .speedbox .item:last-child .conten .binditem:last-child{
+    border-bottom: 0;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem>div{
+    float: left;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem>div>div{
+    margin-top: 8px;
+    line-height: 26px;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem>div>div:last-child{
+    margin-top: 20px;
+}
+.gerenspeed-warp .speedbox .item .conten>div>div span{
+    margin-right: 56px;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .img{
+    width: 120px;
+    height: 84px;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .img img{
+    width: 100%;
+    height: 100%;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .info{
+    padding-left: 25px;
+    width: 512px;
+    height: 84px;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .result{
+    padding-right: 10px;
+    width: 114px;
+    height: 84px;
+    text-align: right;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .result .speed{
+    font-size: 16px;
+    color: #4FB1F7;
+    font-weight: 400;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .result .speed.red{
+    color: #F25484;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .result .look a{
+    color: #4FB1F7;
+}
+.gerenspeed-warp .speedbox .item .conten .binditem .result .look i{
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.gerenspeed-warp .noOrder{
+    padding: 110px 0;
+    text-align: center;
+}
+.gerenspeed-warp .noOrder p{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #27384D;
+    text-align: center;
+}

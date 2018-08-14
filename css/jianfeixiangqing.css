@@ -1,0 +1,129 @@
+.jfxq-wrap{
+    padding: 100px 0 0;
+}
+.jfxq-wrap .container{
+    padding: 0 45px;
+}
+.jfxq-wrap .goods .container{
+    position: relative;
+}
+.jfxq-wrap .goods h1{
+    font-size: 46px;
+    color: #27384D;
+    font-weight: 400;
+}
+.jfxq-wrap .goods a{
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    width: 152px;
+    height: 52px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.jfxq-wrap .section{
+    margin-top: 87px;
+    color: #718398;
+    font-size: 16px;
+}
+.jfxq-wrap .section h2{
+    font-size: 42px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.jfxq-wrap .img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.jfxq-wrap .guanjian h2{
+    margin-top: 100px;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 100;
+}
+.jfxq-wrap .guanjian p{
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.jfxq-wrap .tongji{
+    padding: 70px 0 0;
+    margin: 0 auto;
+    width: 810px;
+}
+.jfxq-wrap .tongji dl{
+    float: left;
+    margin-left: 135px;
+    width: 180px;
+}
+.jfxq-wrap .tongji dl:nth-child(3n+1){
+    margin-left: 0;
+}
+.jfxq-wrap .tongji dt{
+    font-size: 42px;
+    color: #718398;
+    text-align: center;
+}
+.jfxq-wrap .tongji dd{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #718398;
+    text-align: center;
+}
+
+.jfxq-wrap .jiekai{
+    overflow: hidden;
+    height: 578px;
+    background: transparent url("../images/jfxq-block1.jpg") no-repeat scroll center bottom;
+    background-size: auto 100%;
+}
+.jfxq-wrap .jiekai h2{
+    margin: 217px auto 0;
+    width: 928px;
+    font-size: 42px;
+    font-weight: 100;
+    color: #718398;
+    text-align: center;
+    line-height: 72px;
+}
+.jfxq-wrap .jiuchu{
+    overflow: hidden;
+    height: 568px;
+}
+.jfxq-wrap .jiuchu h2{
+    margin: 172px auto 0;
+    width: 815px;
+    font-size: 42px;
+    font-weight: 100;
+    color: #718398;
+    text-align: center;
+    line-height: 72px;
+}
+.jfxq-wrap .baochi{
+    overflow: hidden;
+    height: 714px;
+    background: transparent url("../images/jfxq-block2.jpg") no-repeat scroll center bottom;
+    background-size: auto 100%;
+}
+.jfxq-wrap .baochi h2{
+    margin: 285px auto 0;
+    width: 815px;
+    font-size: 42px;
+    font-weight: 100;
+    color: #718398;
+    text-align: center;
+    line-height: 72px;
+}
+
+
+
+
+
+
+
+
+

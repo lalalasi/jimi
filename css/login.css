@@ -1,0 +1,126 @@
+.login-box{
+    padding: 64px 171px 34px;
+    margin: 0 auto;
+    width: 670px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px 0 rgba(0,0,0,0.15);
+}
+.login-box>div{
+    position: relative;
+    padding: 16px 0;
+}
+.login-box .title{
+    text-align: right;
+}
+.login-box .title img{
+    float: left;
+    width: 123px;
+    height: 65px;
+    vertical-align: top;
+}
+.login-box .title b{
+    display: inline-block;
+    width: 50%;
+    height: 65px;
+    line-height: 65px;
+    text-align: right;
+    font-size: 24px;
+    color: #666666;
+    font-weight: 400;
+    border-left: 1px solid #D9D9D9;
+}
+.login-box .acc-box{
+    margin-top: 32px;
+}
+.login-box .pwd-box{
+    margin-top: 17px;
+}
+.login-box .acc-box .username,.login-box .pwd-box .password{
+    width: 100%;
+}
+.login-box .pwd-box .clear{
+    display: none;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 16px;
+    color: rgba(113,131,152,0.50);
+    cursor: pointer;
+}
+.login-box>div p.alert{
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 0px;
+    height: 21px;
+    line-height: 21px;
+}
+.login-box>div p.alert i{
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 6px;
+    vertical-align: middle;
+    color: #F25484;
+}
+.login-box .submit{
+    margin-top: 26px;
+}
+.login-box .submit .login-btn{
+    height: 46px;
+    line-height: 34px;
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.login-box .remember{
+    text-align: right;
+}
+.login-box .remember label{
+    float: left;
+    color: #666666;
+    cursor: pointer;
+}
+.login-box .remember label .icon-gouxuan{
+    font-size: 18px;
+    vertical-align: middle;
+}
+.login-box .remember a{
+    margin: 0 10px;
+    color: #1991EB;
+}
+.login-box .remember a:last-child{
+    margin-right: 0px;
+}
+.login-box .others{
+    line-height: 20px;
+}
+.login-box .others span{
+    margin-right: 6px;
+}
+.login-box .others a{
+    margin-right: 50px;
+}
+.login-box .others a:last-child{
+    margin-right: 0px;
+}
+.login-box .others i{
+    margin-top: -5px;
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size:24px;
+}
+.login-box .others .icon-weixin{
+    color: #19D100;
+}
+.login-box .others .icon-QQ{
+    color: #68BEF8;
+}
+.allright{
+    margin-top: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #666666;
+}

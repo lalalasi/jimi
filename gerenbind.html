@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>己秘 - 个人基因组检测与分析平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/gerenbind.css">
+
+    <!--脚本加载-->
+    <script src="js/config.js"></script>
+</head>
+<body>
+<div id="header"></div>
+
+<div id="content" class="gerenbind-warp">
+    <div class="container clearfix">
+        <div class="left menu">
+            <ul>
+                <li><a href="gereninfo.html">个人信息</a></li>
+                <li><a href="gerenpwd.html">修改密码</a></li>
+                <li><a href="gerenorder.html">我的订单</a></li>
+                <li><a class="active" href="gerenbindlist.html">样本绑定</a></li>
+                <li><a href="gerenspeed.html">查看报告</a></li>
+            </ul>
+        </div>
+        <div class="right panel">
+            <div class="bindbox">
+                <div class="stepbox step1">
+                    <div class="title">
+                        <ul class="clearfix">
+                            <li class="active"><i class="icon">1</i>输入套件编码</li>
+                            <li><i class="icon">2</i>签署知情同意书</li>
+                            <li><i class="icon">3</i>填写检测人信息</li>
+                            <li><i class="icon">4</i>绑定成功！</li>
+                        </ul>
+                    </div>
+                    <div class="conten">
+                        <div>
+                            <p>输入套件码( <span>套件码位于采集管上，位置如下图所示</span>)：</p>
+                            <div>
+                                <input class="sampleCode" type="text"/>
+                            </div>
+                        </div>
+                        <!--<div>-->
+                            <!--<p>输入检测者姓名：</span></p>-->
+                            <!--<div>-->
+                                <!--<input type="text" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div>
+                            <img src="images/taojian.png">
+                        </div>
+                        <div class="">
+                            <a class="btn taojian-next" href="javascript:;">下一步</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stepbox step2"  style="display: none;">
+                    <div class="title">
+                        <ul class="clearfix">
+                            <li class="finish"><i class="icon iconfont icon-duigou"></i>输入套件编码</li>
+                            <li class="active"><i class="icon">2</i>签署知情同意书</li>
+                            <li><i class="icon">3</i>填写检测人信息</li>
+                            <li><i class="icon">4</i>绑定成功！</li>
+                        </ul>
+                    </div>
+                    <div class="conten">
+                        <div class="agree">
+                            <h3>己秘基因检测服务协议</h3>
+                            <p>尊敬的先生/女士：</p>
+                            <p>欢迎您使用己秘基因检测服务，为了保证您在充分知情的情况下参加本次检测，请仔细阅读本协议。参加本次检测项目完全是自愿行为，如果您决定参加本检测项目，视为您已完全阅读、了解并同意本协议所述内容。请您遵守相关条款规定，与己秘一起完成本次项目的合作。如果您未满18周岁，请在法定监护人的陪同下阅读本协议。</p>
+                            <p>一、协议范围</p>
+                            <p>本协议由用户与己秘共同缔结，“用户”是指使用己秘相关服务的使用人，在本协议中更多地称为“您”。</p>
+                            <p>二、用户信息</p>
+                            <p>在使用本服务时，您应当按表格的提示准确完整地提供您的信息，包括您的姓名、联系电话、联系地址、调查问卷等，以便服务过程中与您联系。您了解并同意，您有义务保持您提供信息的真实性及有效性，并承担由此引发的因信息错误导致无法有效联络的责任。</p>
+                            <p>三、隐私政策</p>
+                            <p>1 个人数据的保密</p>
+                            <p>己秘承诺除非得到用户授权或依据国家法律要求，己秘不会向任何人或组织转移与用户身份信息直接关联的的样品、样品衍生物和遗传信息。</p>
+                            <p>2个人数据的披露</p>
+                            <p>在如下情况下，己秘将依据您的个人意愿或法律的规定全部或部分的披露您的个人信息：1. 经您事先同意，向第三方披露；2.根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；3.其它根据法律、法规认为合适的披露。</p>
+                            <p>四、授权声明</p>
+                            <p>您对下列事项予以授权确认：</p>
+                            <p>1 您同意己秘及其合作机构获得、保存、处理和分析您提供的体液样品、样品衍生物和经分析产生的相关信息并向您提供相关报告。同意己秘将您的个人数据用于基因相关的数据挖掘，用于您的基因报告的更新和发送。</p>
+                            <p>2 您同意己秘将剥离您个人信息后的相关数据与己秘合作伙伴（包括但不限于科学研究机构，药品研发中心、医疗卫生组织等）进行共享，从而推进科学研究。</p>
+                            <p>3 您同意在剥离个人信息的前提下，己秘有权对包括您的数据在内的整个用户数据库进行分析并对用户数据库进行商业上的利用。</p>
+                            <p>免责条款</p>
+                            <p>1 限于当前行业检测技术及实验室检测普遍存在容错率的客观事实，在己秘提供的检测服务中，存在虽经严谨检测但仍出现误差的可能性，该误差属于不可控误差。己秘只承担严谨检测的责任，对不可控误差不承担任何责任。</p>
+                            <p>2 己秘可以基于生物遗传原理在一定程度上推知您的家族相关遗传信息。己秘不承担基于遗传信息推定而获得您家族相关信息的非授权责任。</p>
+                            <p>3 己秘最终为客户所提供的报告和/或分析，仅用于科研目的，在任何情况下不应将其使用于医学临床诊断或分析。己秘仅对用户体液分析数据科学性和准确性提供保证，并不提供诊断结论和治疗建议。</p>
+                            <p>4 由于非己秘方责任导致的时间延误（包括但不限于用户原因导致的DNA采集失败，物流公司原因导致的投递延迟及其他不可抗拒力导致的时间延误），己秘不承担任何责任。</p>
+                            <p>争议与仲裁</p>
+                            <p>本协议之订立、生效、解释、修订、补充、终止、执行与争议解决均适用中华人民共和国大陆地区法律；如法律无相关规定的，参照商业惯例及/或行业惯例。</p>
+                            <p>您因使用己秘服务所产生有关的争议，由己秘与您协商解决。协商不成时，应以己秘所在地法院作为第一审管辖法院，按照中华人民共和国法律，因级别管辖的规定无权管辖的，以其上级法院作为第一审管辖法院。</p>
+                        </div>
+                        <div class="submit">
+                            <a class="btn xieyi-next" href="javascript:;">我同意</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stepbox step3" style="display: none;">
+                    <div class="title">
+                        <ul class="clearfix">
+                            <li class="finish"><i class="icon iconfont icon-duigou"></i>输入套件编码</li>
+                            <li class="finish"><i class="icon iconfont icon-duigou"></i>签署知情同意书</li>
+                            <li class="active"><i class="icon">3</i>填写检测人信息</li>
+                            <li><i class="icon">4</i>绑定成功！</li>
+                        </ul>
+                    </div>
+                    <div class="conten">
+                        <div class="formbox">
+                            <div>
+                                <label>姓名：</label>
+                                <input class="name" type="text" />
+                            </div>
+                            <div>
+                                <label>性别：</label>
+                                <div class="select">
+                                    <select id="gender">
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label>籍贯：</label>
+                                <div class="select">
+                                    <select id="province">
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                                <div class="select">
+                                    <select id="city">
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                                <div class="select">
+                                    <select id="county">
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label>民族：</label>
+                                <div class="select">
+                                    <select name="speed" id="nation">
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label>出生年月：</label>
+                                <input class="birthday" type="text" placeholder="请输入出生年月"/>
+                            </div>
+                            <div>
+                                <label>手机号：</label>
+                                <input class="phone" type="text" placeholder="请输入手机号" />
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <a class="btn xinxi-next" href="javascript:;">确定</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stepbox step4" style="display: none;">
+                    <div class="title">
+                        <ul class="clearfix">
+                            <li class="finish"><i class="icon iconfont icon-duigou"></i>输入套件编码</li>
+                            <li class="finish"><i class="icon iconfont icon-duigou"></i>签署知情同意书</li>
+                            <li class="finish"><i class="icon iconfont icon-duigou"></i>填写检测人信息</li>
+                            <li class="active"><i class="icon">4</i>绑定成功！</li>
+                        </ul>
+                    </div>
+                    <div class="conten">
+                        <div class="btitle"><h3></h3></div>
+                        <div class="bimg"></div>
+                        <div class="btjno">您的套件编号为：<a href="javascript:;"></a></div>
+                        <div class="blook">可在“<a href="gerenspeed.html">进度查询</a>”中查看样本检测进度。</div>
+                        <div class="submit">
+                            <a class="btn okbtn" href="javascript:;">确定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+<div id="popup"></div>
+
+<script src="js/gerenbind.js"></script>
+</body>
+</html>

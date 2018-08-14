@@ -1,0 +1,102 @@
+.shequ-wrap{
+    background: #F4F7F9;
+}
+.shequ-wrap .container{
+    padding: 50px 45px;
+}
+.shequ-wrap .sqbox{
+    padding: 40px 35px;
+    background: #FFFFFF;
+    border: 1px solid #EDEFF1;
+    border-radius: 4px;
+}
+.shequ-wrap .sqbox .title{
+    padding: 0 0 10px 24px;
+    font-size: 15px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.shequ-wrap .sqbox .title ul{
+    display: table;
+    float: right;
+    width: 432px;
+}
+.shequ-wrap .sqbox .title ul li{
+    display: table-cell;
+    margin-right: 24px;
+}
+.shequ-wrap .sqbox .title ul li::before{
+    content: "";
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 7px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: #EDEFF1;
+}
+.shequ-wrap .sqbox .conten{
+    padding: 28px 0 0;
+    width: 100%;
+}
+.shequ-wrap .sqbox .conten .item{
+    margin-top: 20px;
+    padding: 20px 0 20px 24px;
+    font-size: 0;
+    letter-spacing: -3px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.shequ-wrap .sqbox .conten .item>div{
+    display: inline-block;
+    height: 160px;
+    vertical-align: top;
+    font-size: 14px;
+    letter-spacing: normal;
+}
+.shequ-wrap .sqbox .conten .item .qimg{
+    width: 240px;
+}
+.shequ-wrap .sqbox .conten .item .qimg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.shequ-wrap .sqbox .conten .item .qname{
+    padding-top: 27px;
+    padding-left: 24px;
+    width: 316px;
+}
+.shequ-wrap .sqbox .conten .item .qname h3{
+    padding: 13px 0;
+    font-size: 24px;
+    color: #666666;
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shequ-wrap .sqbox .conten .item .qname p{
+    padding: 13px 0;
+    line-height: 22px;
+}
+.shequ-wrap .sqbox .conten .item .qname p span{
+    margin-right: 26px;
+}
+
+.shequ-wrap .sqbox .conten .item .qdata{
+    padding-left: 24px;
+    width: 456px;
+}
+.shequ-wrap .sqbox .conten .item .qdata ul{
+    display: table;
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+.shequ-wrap .sqbox .conten .item .qdata ul li{
+    display: table-cell;
+    margin-right: 24px;
+    padding-left: 21px;
+    vertical-align: middle;
+}

@@ -1,0 +1,98 @@
+.goumai-wrap{
+    background: #ffffff;
+}
+.goumai-wrap .container{
+    padding: 0 45px;
+}
+.goumai-wrap h2{
+    margin: 0;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 400;
+    color: #27384D;
+    letter-spacing: 2px;
+}
+.goumai-wrap .goumai-desc{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.goumai-wrap .goumai-desc p{
+    padding: 0 205px;
+    line-height: 26px;
+}
+.goumai-wrap .goumai-product{
+    padding-bottom: 50px;
+}
+.goumai-wrap .goumai-product .goumai-item{
+    margin-top: 30px;
+    padding: 42px 24px;
+    border: 1px solid #DADADA;
+}
+.goumai-wrap .goumai-product .goumai-item div{
+    float: left;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdata{
+    padding: 0 25px;
+    width: 200px;
+    height: 180px;
+    text-align: center;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdata .price{
+    margin-top: 26px;
+    font-size: 30px;
+    color: #4FB1F7;
+    font-weight: 200;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdata .number{
+    font-size: 14px;
+    color: #999999;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdata .paybtn{
+    margin-top: 22px;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdata .paybtn a{
+    width: 152px;
+    height: 50px;
+    line-height: 38px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdesc{
+    padding-left: 83px;
+    padding-right: 47px;
+    width: 540px;
+    height: 180px;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdesc h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #27384D;
+    line-height: 26px;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdesc p{
+    margin-top: 26px;
+    color: #666666;
+    line-height: 25px;
+}
+.goumai-wrap .goumai-product .goumai-item .gmimg{
+    width: 320px;
+    height: 180px;
+}
+.goumai-wrap .goumai-product .goumai-item .gmimg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.goumai-wrap .goumai-product .goumai-item.even .gmdesc{
+    padding-left: 47px;
+    padding-right: 83px;
+    width: 540px;
+    height: 180px;
+}
+.goumai-wrap .goumai-product .goumai-item .gmdesc h3{
+    text-align: right;
+}
+.goumai-wrap .goumai-product .goumai-item.even .gmdesc h3{
+    text-align: left;
+}

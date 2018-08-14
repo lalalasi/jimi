@@ -1,0 +1,114 @@
+.shequques-wrap{
+    background: #F4F7F9;
+}
+.shequques-wrap .container{
+    padding: 50px 45px;
+}
+.shequques-wrap .pagebox{
+    padding: 40px 35px 0;
+    background: #FFFFFF;
+    border: 1px solid #EDEFF1;
+    border-radius: 4px;
+}
+.shequques-wrap .pagebox .title{
+    position: relative;
+    padding: 0 0 10px 24px;
+    font-size: 15px;
+    /*border-bottom: 1px solid #E6E6E6;*/
+}
+.shequques-wrap .pagebox .title .post{
+    position: absolute;
+    top: -22px;
+    right: 0;
+    padding: 8px 0;
+    width: 127px;
+    color: #ffffff;
+}
+.shequques-wrap .pagebox .conten{
+    width: 100%;
+}
+.shequques-wrap .pagebox a{
+    color: #4FB1F7;
+}
+.shequques-wrap .pagebox a.disable{
+    color: #666666;
+}
+
+
+
+
+.shequques-wrap .pagebox .conten .quesbox{
+    margin: 35px auto 0;
+    padding: 23px;
+    width: 562px;
+    border: 1px solid #ECEFF1;
+    border-radius: 4px;
+}
+.shequques-wrap .pagebox .conten .quesbox h3{
+    font-size: 16px;
+    color: #27384D;
+    font-weight: 400;
+    text-align: center;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-title{
+    margin-top: 50px;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-title input{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-type{
+    margin-top: 20px;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-type .select{
+    margin-top: 20px;
+    width: 150px;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-conten{
+    margin-top: 20px;
+    width: 100%;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-upload{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #A2A2A2;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-upload .btn{
+    margin-right: 7px;
+    padding: 0;
+    width: 68px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #666666;
+    border-radius: 11px;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-submit{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666666;
+    text-align: right;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-submit input{
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.shequques-wrap .pagebox .conten .quesbox .ques-submit .btn{
+    margin-left: 12px;
+    padding: 0;
+    width: 68px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #4FB1F7;
+    border-radius: 11px;
+}
+
+#editor div{
+    transition: ease 0s all;;
+}

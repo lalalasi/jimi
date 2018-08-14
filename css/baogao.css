@@ -1,0 +1,114 @@
+.wrap{
+    font-size: 17px;
+    color: #718398;
+}
+.wrap .container{
+    padding: 0 72px;
+}
+.wrap .desc{
+    height: 640px;
+}
+.wrap.jianfei .desc{
+    background: transparent url("../images/dome_jf_desc.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.meiyan .desc{
+    background: transparent url("../images/dome_my_desc.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.yingyang .desc{
+    background: transparent url("../images/dome_yy_desc.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.aibing .desc{
+    background: transparent url("../images/dome_ab_desc.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.manbing .desc{
+    background: transparent url("../images/dome_mb_desc.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+
+.wrap .desc h2{
+    margin: 0;
+    padding: 193px 0 0;
+    font-size: 42px;
+    font-weight: 100;
+    color: #718398;
+    letter-spacing: 2px;
+}
+
+.wrap .desc p{
+    margin-top: 28px;
+    width: 420px;
+    line-height: 1.7;
+}
+.wrap .desc p b{
+    font-weight: lighter;
+}
+
+.wrap .download{
+    height: 640px;
+}
+
+.wrap.jianfei .download{
+    background: transparent url("../images/dome_jf_baogao.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.meiyan .download{
+    background: transparent url("../images/dome_my_baogao.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.yingyang .download{
+    background: transparent url("../images/dome_yy_baogao.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.aibing .download{
+    background: transparent url("../images/dome_ab_baogao.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+.wrap.manbing .download{
+    background: transparent url("../images/dome_mb_baogao.jpg") no-repeat scroll center top;
+    background-size: auto 100%;
+}
+
+.wrap .download .container{
+    position: relative;
+    height: 100%;
+}
+.wrap .download a{
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    margin-left: -164px;
+    display: block;
+    padding: 0;
+    width: 328px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}
+.wrap .download i{
+    margin-right: 13px;
+}
+
+.wrap .product{
+    padding: 100px 0;
+}
+.wrap .product h2{
+    margin: 0;
+    padding: 0;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 100;
+    color: #718398;
+    letter-spacing: 2px;
+}
+.wrap .product table{
+    margin-top: 77px;
+    width: 100%;
+}
+.wrap .product table tr td{
+    padding: 25px 0;
+    text-align: center;
+}

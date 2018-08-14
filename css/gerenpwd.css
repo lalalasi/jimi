@@ -1,0 +1,58 @@
+.gereninfo-warp{
+    padding: 50px 0;
+    background: #F4F7F9;
+}
+.gereninfo-warp .container{
+    padding: 0 45px;
+}
+.gereninfo-warp .left,.gereninfo-warp .right{
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+.gereninfo-warp .left{
+    padding: 0 10px;
+    width: 160px;
+    height: 400px;
+}
+.gereninfo-warp .right{
+    margin-left: 30px;
+    width: 920px;
+    min-height: 400px;
+}
+.gereninfo-warp .left ul{
+    margin-top: 46px;
+}
+.gereninfo-warp .left ul li{
+    padding-bottom: 10px;
+}
+.gereninfo-warp .left ul li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.gereninfo-warp .left ul li a.active{
+    color: #ffffff;
+    background: #47ABF3;
+}
+
+.gereninfo-warp .pwdbox{
+    padding: 40px 0;
+    margin: 0 auto;
+    width: 280px;
+}
+.gereninfo-warp .pwdbox>div{
+    margin-top: 30px;
+}
+.gereninfo-warp .pwdbox>div input{
+    width: 100%;
+}
+
+.gereninfo-warp .pwdbox .submit a{
+    display: block;
+    width: 100%;
+    padding: 8px 42px;
+}

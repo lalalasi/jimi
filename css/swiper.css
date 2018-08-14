@@ -1,0 +1,53 @@
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    -webkit-touch-callout:none;
+    -moz-user-select: none; // 火狐
+    -webkit-user-select: none; // webkit 浏览器
+    -ms-user-select: none; // IE10
+    -khtml-user-select: none; // 早期浏览器
+    user-select: none;
+}
+.item-list {
+    position: absolute;
+    z-index: 2;
+}
+.item {
+    float: left;
+    overflow: hidden;
+}
+.item img {
+    display: block;
+    width: 100%;
+}
+
+.dot-list {
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+.dot-list ul {
+    display: inline-block;
+}
+.dot {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: #eaeaea;
+    opacity: 0.3;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #fff;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}

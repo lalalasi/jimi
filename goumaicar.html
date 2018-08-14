@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>己秘 - 个人基因组检测与分析平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/goumaicar.css">
+
+    <!--脚本加载-->
+    <script src="js/config.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div id="content" class="goumaicar-wrap">
+    <div class="goods">
+        <div class="container clearfix">
+            <div class="img">
+            </div>
+            <div class="name">
+                <span></span>
+            </div>
+            <div class="amount">
+                数量：
+                <span class="amount-wrap">
+                    <a href="javascript:void(0);" title="减1" class="reduce">-</a>
+                    <input id="iptAmount" class="amount-input" type="text" title="请输入购买量" maxlength="4"/>
+                    <a href="javascript:void(0);" title="加1" class="increase">+</a>
+                </span>
+            </div>
+            <div class="price">
+                单价：<span></span>
+            </div>
+        </div>
+    </div>
+    <div class="infobox">
+        <div class="container">
+            <div class="addressbox">
+                <div class="title">
+                    <h3>收货信息</h3>
+                </div>
+                <div class="conten">
+                    <div class="name"><label>收货人：&nbsp;</label><input class="addrName" type="text" placeholder="请输入姓名"/></div>
+                    <div class=""><label>联系方式：&nbsp;</label><input class="addrPhone" type="text" placeholder="请输入手机号"/></div>
+                    <div>
+                        <label>所在地区：&nbsp;</label>
+                        <div class="select">
+                            <select name="speed" id="province">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <select name="speed" id="city">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <select name="speed" id="county">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div><label>详细地址：&nbsp;</label><input class="address" type="text" placeholder="请输入详细地址"/></div>
+                </div>
+            </div>
+
+            <div class="paybox">
+                <div class="title">
+                    <h3>支付信息</h3>
+                </div>
+                <div class="conten">
+                    <div class="paytype">
+                        <label class="type">支付方式：</label>
+                        <label class="pt rzfb active">
+                            <input type="radio" name="paymethod" value="0"  checked/>
+                            <i class="iconfont icon-zhifubao"></i>
+                        </label>
+                        <label class="pt rwx">
+                            <input type="radio" name="paymethod" value="1" />
+                            <i class="iconfont icon-weixinzhifu"></i>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="type">需要发票：</label>
+                        <label class="radiobox ticketType">
+                            <input type="radio" name="ticketType" value="0"  checked/>
+                            <i></i>
+                            不需要
+                        </label>
+                        <label class="radiobox ticketType">
+                            <input type="radio" name="ticketType" value="1" />
+                            <i></i>
+                            个人
+                        </label>
+                        <label class="radiobox ticketType">
+                            <input type="radio" name="ticketType" value="2" />
+                            <i></i>
+                            公司
+                        </label>
+                    </div>
+                    <div class="taitou hide"><label class="type">发票抬头：</label><input class="ticketTitle" type="text" placeholder="请输入发票抬头"/></div>
+                    <div class="bianhao hide">
+                        <label class="type">纳税人编号：</label><input class="tickeNo" type="text" placeholder="请输入纳税人编号"/>
+                        <div class="msg">根据《国家税务总局公告2017年第16号》规定，自2017年7月1日起，购买方为企业的，索取增值税普通发票时，应向销售方提供纳税人识别号或统一社会信用代码，不符合规定的发票不得作为税收凭证</div>
+                    </div>
+
+                    <div class="beizhu hide"><label class="type">备注：</label><input class="remark" type="text" /></div>
+                </div>
+            </div>
+
+            <div class="submitbox">
+                <span class="total-price">总计：<span></span></span>
+                <span class="pay-price">应付：<span></span></span>
+                <span class="submit"><a href="javascript:;" class="btn btn-blue submitOrder">提交订单</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+<div id="popup"></div>
+
+<script src="js/goumaicar.js"></script>
+</body>
+</html>

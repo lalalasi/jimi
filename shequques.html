@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>己秘 - 个人基因组检测与分析平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/shequques.css">
+
+    <!--脚本加载-->
+    <script src="js/config.js"></script>
+    <script src="components/ueditor/ueditor.config.js"></script>
+    <script src="components/ueditor/ueditor.all.js"> </script>
+    <script src="components/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<div id="header"></div>
+
+<div id="content" class="shequques-wrap">
+    <div class="container">
+        <div class="pagebox">
+            <div class="title">
+                <a href="shequ.html" class="disable">社区</a>><a href="javascript:;">发起讨论</a>
+            </div>
+            <div class="conten">
+                <div class="quesbox">
+                    <h3>发起讨论</h3>
+                    <div class="ques-title">
+                        <input class="postTitle" type="text" placeholder="讨论标题..." />
+                    </div>
+                    <div class="ques-type">
+                        <div class="select">
+                            <select id="postType">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ques-conten">
+                        <script id="editor" type="text/plain"></script>
+                    </div>
+                    <!--<div class="ques-upload">-->
+                        <!--<a href="javascript:;" class="btn">上传附件</a>-->
+                        <!--<span>允许：jpg, jpeg,png,gif,zip,doc,docx,rar,psd</span>-->
+                    <!--</div>-->
+                    <div class="ques-submit">
+                        <label><input class="anonymous" type="checkbox"/>匿名发起</label>
+                        <a href="javascript:;" class="btn postSubmit">确认发起</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+<div id="popup"></div>
+
+<script src="js/shequques.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+.gerenbindlist-warp{
+    padding: 50px 0;
+    background: #F4F7F9;
+}
+.gerenbindlist-warp .container{
+    padding: 0 45px;
+}
+.gerenbindlist-warp .left,.gerenbindlist-warp .right{
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+.gerenbindlist-warp .left{
+    padding: 0 10px;
+    width: 160px;
+    height: 400px;
+}
+.gerenbindlist-warp .right{
+    margin-left: 30px;
+    width: 920px;
+    min-height: 400px;
+}
+.gerenbindlist-warp .left ul{
+    margin-top: 46px;
+}
+.gerenbindlist-warp .left ul li{
+    padding-bottom: 10px;
+}
+.gerenbindlist-warp .left ul li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.gerenbindlist-warp .left ul li a.active{
+    color: #ffffff;
+    background: #47ABF3;
+}
+
+.gerenbindlist-warp .bindlistbox{
+    padding: 15px 70px;
+}
+.gerenbindlist-warp .bindlistbox .item{
+    margin-top: 50px;
+}
+.gerenbindlist-warp .bindlistbox .item .title{
+    padding: 16px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #F5F5F5;
+    border-radius: 2px;
+}
+.gerenbindlist-warp .bindlistbox .item .title::before{
+    content: "";
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: #8EDEE0;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order{
+    border-bottom: 1px solid #E6E6E6;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data{
+    padding: 20px 11px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data>div{
+    float: left;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data>div>div{
+    margin-top: 11px;
+    line-height: 26px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data>div>div span{
+    margin-right: 12px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .oimg{
+    width: 120px;
+    height: 84px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .oimg img{
+    width: 100%;
+    height: 100%;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .oname{
+    padding-left: 25px;
+    width: 205px;
+    height: 84px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .oname .data{
+    font-size: 12px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .ophone{
+    padding-left: 25px;
+    width: 229px;
+    height: 84px;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .operation{
+    padding-left: 60px;
+    width: 202px;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+}
+.gerenbindlist-warp .bindlistbox .item .conten .order .user-data .operation .btn{
+    display: inline;
+    width: 100%;
+    padding: 8px 42px;
+}
+
+.gerenbindlist-warp .noOrder{
+    padding: 110px 0;
+    text-align: center;
+}
+.gerenbindlist-warp .noOrder p{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #27384D;
+    text-align: center;
+}

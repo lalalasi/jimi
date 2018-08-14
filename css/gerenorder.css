@@ -1,0 +1,132 @@
+.gerenorder-warp{
+    padding: 50px 0;
+    background: #F4F7F9;
+}
+.gerenorder-warp .container{
+    padding: 0 45px;
+}
+.gerenorder-warp .left,.gerenorder-warp .right{
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+.gerenorder-warp .left{
+    padding: 0 10px;
+    width: 160px;
+    height: 400px;
+}
+.gerenorder-warp .right{
+    margin-left: 30px;
+    width: 920px;
+    min-height: 400px;
+}
+.gerenorder-warp .left ul{
+    margin-top: 46px;
+}
+.gerenorder-warp .left ul li{
+    padding-bottom: 10px;
+}
+.gerenorder-warp .left ul li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.gerenorder-warp .left ul li a.active{
+    color: #ffffff;
+    background: #47ABF3;
+}
+
+.gerenorder-warp .orderbox{
+    padding: 15px 70px;
+}
+.gerenorder-warp .orderbox .item{
+    margin-top: 50px;
+}
+.gerenorder-warp .orderbox .item .title{
+    padding: 16px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #F5F5F5;
+    border-radius: 2px;
+}
+.gerenorder-warp .orderbox .item .title::before{
+    content: "";
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: #8EDEE0;
+}
+.gerenorder-warp .orderbox .item .conten .order{
+    cursor: pointer;
+    border-bottom: 1px solid #E6E6E6;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data{
+    padding: 20px 11px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data>div{
+    float: left;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data>div>div{
+    margin-top: 11px;
+    line-height: 26px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data>div>div span{
+    margin-right: 12px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .oimg{
+    width: 120px;
+    height: 84px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .oimg img{
+    width: 100%;
+    height: 100%;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .oname{
+    padding-left: 25px;
+    width: 205px;
+    height: 84px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .oname .data{
+    font-size: 12px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .ophone{
+    padding-left: 25px;
+    width: 229px;
+    height: 84px;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .oprice{
+    padding-right: 60px;
+    width: 202px;
+    height: 84px;
+    text-align: right;
+}
+.gerenorder-warp .orderbox .item .conten .order .user-data .oprice .total{
+    font-size: 20px;
+    color: #FB8D56;
+}
+.gerenorder-warp .orderbox .item .conten .order .order-data{
+    padding: 20px 45px;
+    color: #27384D;
+    line-height: 26px;
+    background: #F4F7F9;
+}
+.gerenorder-warp .orderbox .item .conten .order .order-data span{
+    margin-right: 17px;
+}
+
+.gerenorder-warp .noOrder{
+    padding: 110px 0;
+    text-align: center;
+}
+.gerenorder-warp .noOrder p{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #27384D;
+    text-align: center;
+}

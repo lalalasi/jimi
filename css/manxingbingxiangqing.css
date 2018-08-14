@@ -1,0 +1,205 @@
+.mxbxq-wrap{
+    padding: 100px 0;
+}
+.mxbxq-wrap .container{
+    padding: 0 45px;
+}
+.mxbxq-wrap .goods .container{
+    position: relative;
+}
+.mxbxq-wrap .goods h1{
+    font-size: 46px;
+    color: #27384D;
+    font-weight: 400;
+}
+.mxbxq-wrap .goods a{
+    position: absolute;
+    top: 3px;
+    right: 45px;
+    width: 152px;
+    height: 52px;
+    line-height: 40px;
+    font-size: 16px;
+}
+/*.mxbxq-wrap .goods a.abBuyBtn{*/
+    /*position: absolute;*/
+    /*top: 66px;*/
+    /*right: 0;*/
+    /*width: 152px;*/
+    /*height: 52px;*/
+    /*line-height: 40px;*/
+    /*font-size: 16px;*/
+/*}*/
+.mxbxq-wrap .section{
+    margin-top: 92px;
+    color: #718398;
+    font-size: 16px;
+}
+.mxbxq-wrap .section h2{
+    font-size: 42px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.mxbxq-wrap .gaofa .content{
+    margin-top: 35px;
+}
+.mxbxq-wrap .gaofa .content .row{
+    margin-top: 55px;
+}
+.mxbxq-wrap .gaofa .content .row:first-child{
+    margin-top: 0;
+}
+.mxbxq-wrap .gaofa .content .row>div.left{
+    float: left;
+}
+.mxbxq-wrap .gaofa .content .row>div.right{
+    float: right;
+}
+.mxbxq-wrap .gaofa .content .row .left h3{
+    font-size: 17px;
+    font-weight: 400;
+}
+.mxbxq-wrap .gaofa .content .row .left p{
+    margin-top: 16px;
+    line-height: 23px;
+}
+
+.mxbxq-wrap .guandian>img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.mxbxq-wrap .guandian .content{
+    padding-top: 88px;
+}
+.mxbxq-wrap .guandian .content dl{
+    width: 487px;
+}
+.mxbxq-wrap .guandian .content dl.error{
+    float: left;
+    font-size: 20px;
+    color: #F25484;
+}
+.mxbxq-wrap .guandian .content dl.success{
+    float: right;
+    font-size: 20px;
+    color: #00BFBF;
+}
+
+.mxbxq-wrap .guandian .content dl dt{
+    float: left;
+    padding-top: 55px;
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+.mxbxq-wrap .guandian .content dl dd{
+    float: left;
+    width: 367px;
+    font-size: 24px;
+}
+.mxbxq-wrap .guandian .content dl dd:nth-child(2){
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 20px !important;
+}
+.mxbxq-wrap .guandian .content dl.error dd{
+    font-size: 34px;
+}
+.mxbxq-wrap .guandian .tips{
+    margin-top: 19px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.mxbxq-wrap .yuce .content{
+    margin-top: 33px;
+    padding: 0 100px;
+    text-align: center;
+}
+.mxbxq-wrap .yuce .content>div{
+
+}
+.mxbxq-wrap .yuce .content>div.left{
+    float: left;
+}
+.mxbxq-wrap .yuce .content>div.right{
+    float: right;
+}
+.mxbxq-wrap .yuce .content h3{
+    font-size: 24px;
+    font-weight: 100;
+}
+.mxbxq-wrap .yuce .content table{
+    margin: 30px auto 0;
+    width: 354px;
+    /*width: 100%;*/
+}
+.mxbxq-wrap .yuce .content table tr td{
+    padding: 8px 0;
+    opacity: 0.6;
+}
+
+.mxbxq-wrap .tedian .content{
+    margin: 32px auto 0;
+    width: 832px;
+}
+.mxbxq-wrap .tedian .content > div{
+    float: left;
+    margin-left: 80px;
+    width: 224px;
+}
+.mxbxq-wrap .tedian .content > div:first-child{
+    margin-left: 0;
+}
+.mxbxq-wrap .tedian .content div h3{
+    text-align: center;
+    font-weight: 400;
+}
+.mxbxq-wrap .tedian .content div p{
+    margin-top: 30px;
+    line-height: 25px;
+    opacity: 0.6;
+}
+
+
+.mxbxq-wrap .gushi{
+
+}
+.mxbxq-wrap .gushi .content{
+    margin-top: 38px;
+    color: #FFFFFF;
+}
+.mxbxq-wrap .gushi .content>div{
+    /*float: left;*/
+    /*margin-left: 12px;*/
+    margin: 0 auto;
+    padding: 40px 46px;
+    width: 546px;
+    height: 200px;
+    background: #4FB1F7;
+}
+/*.mxbxq-wrap .gushi .content>div:first-child{*/
+    /*margin-left: 0;*/
+/*}*/
+.mxbxq-wrap .gushi .content div p{
+    margin-top: 30px;
+}
+.mxbxq-wrap .gushi .content div p:first-child{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

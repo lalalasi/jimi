@@ -1,0 +1,95 @@
+.bing-wrap{
+    padding: 80px 0;
+    line-height: 1.7;
+    font-size: 17px;
+    color: #718398;
+}
+.bing-wrap h2{
+    margin: 0;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 100;
+    color: #27384D;
+    letter-spacing: 2px;
+}
+.bing-wrap .bing-desc .container p{
+    padding: 0 200px;
+    text-align: center;
+}
+.bing-wrap .bing-desc .container p b{
+    font-weight: lighter;
+}
+.bing-wrap .bing-desc .dimg{
+    padding: 95px 0 85px;
+}
+.bing-wrap .bing-desc .dimg img{
+    display: block;
+    width: 100%;
+    /*height: 494px;*/
+}
+
+.bing-wrap .bing-product .container p{
+    padding: 0 200px;
+    text-align: center;
+}
+.bing-wrap .bing-product .container .statistics{
+    padding: 30px 0 0;
+}
+.bing-wrap .bing-product .container .statistics table{
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
+}
+.bing-wrap .bing-product .container .statistics table tr td{
+    padding: 10px 0;
+    font-weight: lighter;
+}
+.bing-wrap .bing-product .container .statistics table tr:first-child td{
+    font-weight: 400;
+}
+.bing-wrap .bing-product .container .statistics .download{
+    padding: 25px 0;
+    text-align: center;
+}
+.bing-wrap .bing-product .container .statistics .download a{
+    padding: 0;
+    width: 328px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}
+.bing-wrap .bing-product .container .statistics .download a i{
+    margin-right: 13px;
+}
+.bing-wrap .bing-product .container .product{
+    padding: 54px 0 0;
+    margin: 0 auto;
+    width: 1120px;
+}
+.bing-wrap .bing-product .container .product img{
+    display: block;
+    float: left;
+    width: 880px;
+    height: 400px;
+}
+.bing-wrap .bing-product .container .product .list{
+    float: right;
+    width: 200px;
+}
+.bing-wrap .bing-product .container .product .list h2{
+    padding: 0 0 30px;
+    line-height: 1;
+    text-align: left;
+}
+.bing-wrap .bing-product .container .product .list .conten{
+    width: 200px;
+    height: 322px;
+}
+.bing-wrap .bing-product .container .product .list .conten ul li{
+    padding: 4px 0;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

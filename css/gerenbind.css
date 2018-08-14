@@ -1,0 +1,228 @@
+.gerenbind-warp{
+    padding: 50px 0;
+    background: #F4F7F9;
+}
+.gerenbind-warp .container{
+    padding: 0 45px;
+}
+.gerenbind-warp .left,.gerenbind-warp .right{
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+.gerenbind-warp .left{
+    padding: 0 10px;
+    width: 160px;
+    height: 400px;
+}
+.gerenbind-warp .right{
+    margin-left: 30px;
+    width: 920px;
+}
+.gerenbind-warp .left ul{
+    margin-top: 46px;
+}
+.gerenbind-warp .left ul li{
+    padding-bottom: 10px;
+}
+.gerenbind-warp .left ul li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.gerenbind-warp .left ul li a.active{
+    color: #ffffff;
+    background: #47ABF3;
+}
+
+/*步骤块*/
+.gerenbind-warp .bindbox{
+    padding: 80px 80px 0;
+}
+.gerenbind-warp .bindbox .step1{
+}
+.gerenbind-warp .bindbox .stepbox .title{
+    padding: 0 20px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.gerenbind-warp .bindbox .stepbox .title ul{
+    padding: 30px 0;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li{
+    float: left;
+    position: relative;
+    padding: 0 29px;
+    color: #999999;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li:last-child{
+    padding-right: 0;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li:first-child{
+    padding-left: 0;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    margin-top: -1px;
+    width: 40px;
+    border: 1px solid #D9D9D9;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li:last-child::after{
+    display: none;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li i{
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    color: #999999;
+    text-align: center;
+    vertical-align: middle;
+    font-style: normal;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li.active{
+    color: #333333;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li.active i{
+    color: #ffffff;
+    background: #108EE9;
+    border: 1px solid #108EE9;
+}
+.gerenbind-warp .bindbox .stepbox .title ul li.finish i{
+    color: #108EE9;
+    border: 1px solid #108EE9;
+}
+
+/*步骤1*/
+.gerenbind-warp .bindbox .step1 .conten{
+    padding: 42px 161px 0;
+}
+.gerenbind-warp .bindbox .step1 .conten>div{
+    padding-bottom: 50px;
+    text-align: center;
+}
+.gerenbind-warp .bindbox .step1 .conten>div p span{
+    color: #4FB1F7;
+}
+.gerenbind-warp .bindbox .step1 .conten>div input{
+    margin-top: 10px;
+    width: 435px;
+}
+.gerenbind-warp .bindbox .step1 .conten>div img{
+    width: 158px;
+    height: 200px;
+}
+.gerenbind-warp .bindbox .step1 .conten>div a{
+    padding: 0;
+    width: 149px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}
+
+/*步骤2*/
+.gerenbind-warp .bindbox .step2 .conten>div{
+    padding-bottom: 50px;
+}
+.gerenbind-warp .bindbox .step2 .conten .agree h3{
+    padding: 45px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #27384D;
+    font-weight: 400;
+}
+.gerenbind-warp .bindbox .step2 .conten .agree p{
+    margin-top: 14px;
+}
+.gerenbind-warp .bindbox .step2 .conten .submit{
+    text-align: center;
+}
+.gerenbind-warp .bindbox .step2 .conten .submit a{
+    padding: 0;
+    width: 149px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}
+
+/*步骤3*/
+.gerenbind-warp .bindbox .step3 .conten{
+    padding: 46px 190px 25px;
+}
+.gerenbind-warp .bindbox .step3 .conten .formbox>div{
+    padding-bottom: 18px;
+}
+.gerenbind-warp .bindbox .step3 .conten .formbox>div>label{
+    display: inline-block;
+    width: 72px;
+    text-align: right;
+}
+.gerenbind-warp .bindbox .step3 .conten .formbox>div>input{
+    width: 300px;
+}
+.gerenbind-warp .bindbox .step3 .conten .formbox>div .select{
+    display: inline-block;
+    width: 90px;
+}
+.gerenbind-warp .bindbox .step3 .conten .submit{
+    padding: 25px 0;
+    text-align: center;
+}
+.gerenbind-warp .bindbox .step3 .conten .submit a{
+    padding: 0;
+    width: 149px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}
+
+/*步骤4*/
+.gerenbind-warp .bindbox .step4 .conten>div{
+    padding-bottom: 50px;
+    text-align: center;
+}
+.gerenbind-warp .bindbox .step4 .conten .btitle h3{
+    padding: 50px 0 0;
+    font-size: 22px;
+    color: #27384D;
+    font-weight: 400;
+}
+.gerenbind-warp .bindbox .step4 .conten .bimg i{
+    font-size: 40px;
+}
+.gerenbind-warp .bindbox .step4 .conten .bimg i.success{
+    color: #3DBD7D;
+}
+.gerenbind-warp .bindbox .step4 .conten .bimg i.fail{
+    color: #F25484;
+}
+.gerenbind-warp .bindbox .step4 .conten .btjno{
+    padding-bottom: 0px;
+}
+.gerenbind-warp .bindbox .step4 .conten .blook{
+    margin-top: 8px;
+    padding-bottom: 100px;
+}
+.gerenbind-warp .bindbox .step4 .conten .btjno a,.gerenbind-warp .bindbox .step4 .conten .blook a{
+    color: #4FB1F7;
+}
+.gerenbind-warp .bindbox .step4 .conten .submit{
+    text-align: center;
+}
+.gerenbind-warp .bindbox .step4 .conten .submit a{
+    padding: 0;
+    width: 149px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>己秘 - 个人基因组检测与分析平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/shequdetails.css">
+
+    <!--脚本加载-->
+    <script src="js/config.js"></script>
+    <script src="components/ueditor/ueditor.config.js"></script>
+    <script src="components/ueditor/ueditor.all.js"> </script>
+    <script src="components/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<div id="header"></div>
+
+<div id="content" class="shequdetails-wrap">
+    <div class="container">
+        <div class="xqbox">
+            <div class="title">
+                <a href="shequ.html">社区</a>><a class="loca" href="javascript:;">综合讨论社区</a>
+                <a href="javascript:;" class="btn btn-blue post topAnswer">回复</a>
+            </div>
+            <div class="conten">
+                <div class="clearfix landlord">
+                    <div class="land-left">
+                        <div class="land-mask"><img src="images/mask.png"/></div>
+                        <div class="land-name">匿名用户</div>
+                        <div class="land-iden"><span>楼主</span></div>
+                    </div>
+                    <div class="land-right">
+                        <div class="land-no"><span>1楼</span></div>
+                        <div class="land-title"><h3></h3></div>
+                        <div class="land-conten"></div>
+                        <div class="land-operation">
+                            <a href="javascript:;" class="btn save"></a>
+                            <a href="javascript:;" class="btn care"></a>
+                            <span class="date"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guestbox" id="postCommentList">
+                    <!--<div class="clearfix guest">-->
+                        <!--<div class="guest-left">-->
+                            <!--<div class="guest-mask"><img src="images/mask.png"/></div>-->
+                        <!--</div>-->
+                        <!--<div class="guest-right">-->
+                            <!--<div class="guest-conten">-->
+                                <!--<div class="guest-no"><span class="name">匿名用户</span><span class="layer">1楼</span></div>-->
+                                <!--<div class="guest-text">已经显示最后一步生成报告，还需要多久？<br/>已经显示最后一步生成报告，还需要多久？</div>-->
+                                <!--<div class="guest-operation">-->
+                                    <!--<span class="date">2017/11/12 10:52</span>-->
+                                    <!--<a href="javascript:;" class="btn greply">回复</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="gglist">-->
+                                <!--<i class="iconfont icon-shangjiantou"></i>-->
+                                <!--<div class="ggitem clearfix">-->
+                                    <!--<div class="ggleft">-->
+                                        <!--<div class="ggmask"><img src="images/mask.png"/></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="ggright">-->
+                                        <!--<div class="ggname"><span>a</span>回复<span>b</span></div>-->
+                                        <!--<div class="ggconten clearfix">-->
+                                            <!--<div class="ggtext">呃，基本上口腔拭子是目前最高效的办法了……</div>-->
+                                            <!--<div class="ggdate">-->
+                                                <!--<span>2017/11/12   10:53</span>-->
+                                                <!--<a href="javascript:;" class="ggreply">回复</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="gginput hide">-->
+                                            <!--<input type="text" placeholder="说点什么吧..." />-->
+                                            <!--<a href="javascript:;" class="btn">发送</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                                <!--<div class="ggitem clearfix">-->
+                                    <!--<div class="ggleft">-->
+                                        <!--<div class="ggmask"><img src="images/mask.png"/></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="ggright">-->
+                                        <!--<div class="ggname"><span>a</span>回复<span>b</span></div>-->
+                                        <!--<div class="ggconten clearfix">-->
+                                            <!--<div class="ggtext">呃，基本上口腔拭子是目前最高效的办法了……</div>-->
+                                            <!--<div class="ggdate">-->
+                                                <!--<span>2017/11/12   10:53</span>-->
+                                                <!--<a href="javascript:;" class="ggreply">回复</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="gginput hide">-->
+                                            <!--<input type="text" placeholder="说点什么吧..." />-->
+                                            <!--<a href="javascript:;" class="btn">发送</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="guest-input hide">-->
+                                <!--<input type="text" placeholder="说点什么吧..." />-->
+                                <!--<a href="javascript:;" class="btn">发送</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+
+                    <!--<div class="clearfix guest">-->
+                        <!--<div class="guest-left">-->
+                            <!--<div class="guest-mask"><img src="images/mask.png"/></div>-->
+                        <!--</div>-->
+                        <!--<div class="guest-right">-->
+                            <!--<div class="guest-conten">-->
+                                <!--<div class="guest-no"><span class="name">匿名用户</span><span class="layer">1楼</span></div>-->
+                                <!--<div class="guest-text">已经显示最后一步生成报告，还需要多久？已经显示最后一步生成报告，还需要多久？</div>-->
+                                <!--<div class="guest-operation">-->
+                                    <!--<span class="date">2017/11/12 10:52</span>-->
+                                    <!--<a href="javascript:;" class="btn greply">回复</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="gglist" style="display: none;">-->
+                                <!--<i class="iconfont icon-shangjiantou"></i>-->
+                                <!--<div class="ggitem clearfix">-->
+                                    <!--<div class="ggleft">-->
+                                        <!--<div class="ggmask"><img src="images/mask.png"/></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="ggright">-->
+                                        <!--<div class="ggname"><span>a</span>回复<span>b</span></div>-->
+                                        <!--<div class="ggconten clearfix">-->
+                                            <!--<div class="ggtext">呃，基本上口腔拭子是目前最高效的办法了……</div>-->
+                                            <!--<div class="ggdate">-->
+                                                <!--<span>2017/11/12   10:53</span>-->
+                                                <!--<a href="javascript:;" class="ggreply">回复</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="gginput" style="display: none;">-->
+                                            <!--<input type="text" /><a href="javascript:;">发送</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                                <!--<div class="ggitem clearfix">-->
+                                    <!--<div class="ggleft">-->
+                                        <!--<div class="ggmask"><img src="images/mask.png"/></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="ggright">-->
+                                        <!--<div class="ggname"><span>a</span>回复<span>b</span></div>-->
+                                        <!--<div class="ggconten clearfix">-->
+                                            <!--<div class="ggtext">呃，基本上口腔拭子是目前最高效的办法了……</div>-->
+                                            <!--<div class="ggdate">-->
+                                                <!--<span>2017/11/12   10:53</span>-->
+                                                <!--<a href="javascript:;" class="ggreply">回复</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="gginput">-->
+                                            <!--<input type="text" placeholder="说点什么吧..." />-->
+                                            <!--<a href="javascript:;" class="btn">发送</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+
+                <div class="lreplybox">
+                    <div class="setmsg hide">请验证您的手机以使用社区功能。 <a  href="login.html">前往设置</a></div>
+                    <div class="lreply-conten clearfix" >
+                        <div class="lreply-left">
+                            <div class="lreply-mask"><img src="images/mask.png"/></div>
+                        </div>
+
+                        <div class="lreply-right">
+                            <div class="lreply-bar">
+                                <span class="lreply-name">吃猫的鱼</span>
+                                <span class="lreply-hide"><label><input class="hideAnswer" type="checkbox" />匿名回复</label></span>
+                            </div>
+                            <div class="lreply-input">
+                                <script id="editor" type="text/plain"></script>
+                            </div>
+                            <div class="lreply-submit">
+                                <!--<a  href="javascript:;" class="btn lrepaly-upload">上传附件</a>-->
+                                <!--<span class="lrepaly-upload-mas">允许：jpg,jpeg,png,gif,zip,doc,docx,rar,pdf,psd</span>-->
+                                <a  href="javascript:;" class="btn lrepaly-btn submitPostAnswer">回复</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+<div id="popup"></div>
+
+<script src="js/shequdetails.js"></script>
+</body>
+</html>

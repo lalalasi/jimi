@@ -1,0 +1,144 @@
+.yingyang-wrap{
+    padding: 100px 0;
+}
+.yingyang-wrap .container{
+    padding: 0 45px;
+}
+.yingyang-wrap .goods{
+    position: relative;
+}
+.yingyang-wrap .goods h1{
+    font-size: 46px;
+    color: #27384D;
+    font-weight: 400;
+}
+.yingyang-wrap .goods a{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 152px;
+    height: 52px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.yingyang-wrap .section{
+    margin-top: 87px;
+    color: #718398;
+    font-size: 16px;
+}
+.yingyang-wrap .section h2{
+    font-size: 42px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.yingyang-wrap .wenda{
+
+}
+.yingyang-wrap .wenda .content{
+    margin-top: 20px;
+}
+.yingyang-wrap .wenda .content .row{
+    margin-top: 40px;
+}
+.yingyang-wrap .wenda .content .row h3{
+    font-size: 17px;
+    font-weight: 400;
+}
+.yingyang-wrap .wenda .content .row p{
+    margin-top: 16px;
+    opacity: 0.6;
+}
+
+
+.yingyang-wrap .pinggu{
+
+}
+.yingyang-wrap .pinggu .content{
+    margin-top: 67px;
+}
+.yingyang-wrap .pinggu .content>div{
+    float: left;
+}
+.yingyang-wrap .pinggu .content .left{
+    width: 435px;
+    text-align: right;
+}
+.yingyang-wrap .pinggu .content .right{
+    padding-left: 40px;
+    width: 675px;
+    text-align: left;
+}
+.yingyang-wrap .pinggu .content .right h3{
+    font-weight: 400;
+}
+.yingyang-wrap .pinggu .content .right table{
+    margin-top: 31px;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.yingyang-wrap .tedian{
+
+}
+.yingyang-wrap .tedian .content{
+    margin: 60px auto 0;
+    width: 832px;
+}
+.yingyang-wrap .tedian .content > div{
+    float: left;
+    margin-left: 80px;
+    width: 224px;
+}
+.yingyang-wrap .tedian .content > div:first-child{
+    margin-left: 0;
+}
+.yingyang-wrap .tedian .content div h3{
+    text-align: center;
+    font-weight: 400;
+}
+.yingyang-wrap .tedian .content div p{
+    margin-top: 30px;
+    line-height: 25px;
+    opacity: 0.6;
+}
+
+
+.yingyang-wrap .gushi{
+
+}
+.yingyang-wrap .gushi .content{
+    margin-top: 38px;
+    color: #FFFFFF;
+}
+.yingyang-wrap .gushi .content>div{
+    float: left;
+    margin-left: 12px;
+    padding: 40px 46px;
+    width: 546px;
+    height: 200px;
+    background: #4FB1F7;
+}
+.yingyang-wrap .gushi .content>div:first-child{
+    margin-left: 0;
+}
+.yingyang-wrap .gushi .content div p{
+    margin-top: 30px;
+}
+.yingyang-wrap .gushi .content div p:first-child{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

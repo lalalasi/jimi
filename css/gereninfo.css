@@ -1,0 +1,89 @@
+.gereninfo-warp{
+    padding: 50px 0;
+    background: #F4F7F9;
+}
+.gereninfo-warp .container{
+    padding: 0 45px;
+}
+.gereninfo-warp .left,.gereninfo-warp .right{
+    float: left;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+.gereninfo-warp .left{
+    padding: 0 10px;
+    width: 160px;
+    height: 400px;
+}
+.gereninfo-warp .right{
+    margin-left: 30px;
+    width: 920px;
+}
+.gereninfo-warp .left ul{
+    margin-top: 46px;
+}
+.gereninfo-warp .left ul li{
+    padding-bottom: 10px;
+}
+.gereninfo-warp .left ul li a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.gereninfo-warp .left ul li a.active{
+    color: #ffffff;
+    background: #47ABF3;
+}
+
+.gereninfo-warp .infobox{
+    padding: 20px 270px;
+}
+.gereninfo-warp .infobox>div{
+    padding-bottom: 18px;
+}
+.gereninfo-warp .infobox>div>label{
+    display: inline-block;
+    width: 78px;
+    text-align: right;
+}
+.gereninfo-warp .infobox>div>input{
+    width: 300px;
+}
+.gereninfo-warp .infobox>div div.select{
+    display: inline-block;
+    width: 90px;
+}
+.gereninfo-warp .infobox .mask{
+    padding: 50px 0;
+    text-align: center;
+}
+.gereninfo-warp .infobox .mask p{
+    margin-top: 12px;
+    font-size: 12px;
+    color: #999999;
+}
+.gereninfo-warp .infobox .mask img{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.gereninfo-warp .infobox .mask a{
+    padding: 0;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+}
+.gereninfo-warp .infobox .submit{
+    margin-top: 18px;
+    text-align: center;
+}
+.gereninfo-warp .infobox .submit a{
+    padding: 0;
+    width: 140px;
+    height: 36px;
+    line-height: 36px;
+}

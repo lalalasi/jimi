@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <title>QQ登录</title>
+
+    <!--脚本加载-->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/aes.js"></script>
+    <script src="js/commonEncrypDecryp.js"></script>
+    <script src="js/mode-ecb.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/service.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    //应用的APPID
+    var appID = "101470382";
+    //登录授权后的回调地址，设置为当前url
+    var redirectURI = "http://www.geneme.com.cn/geneme/qqlogin.html";
+
+    //在成功授权后回调时location.hash将带有access_token信息，开始获取openid
+    //获取access token
+    var accessToken = window.location.hash.substring(1);
+    var map = toParamMap(accessToken);
+
+    $(function () {
+        if(accessToken == ""){
+            //初始构造请求
+            var path = 'https://graph.qq.com/oauth2.0/authorize?';
+            var queryParams = ['client_id=' + appID,
+                'redirect_uri=' + redirectURI,
+                'scope=' + 'get_user_info,list_album,upload_pic,add_feeds,do_like',
+                'response_type=token'];
+
+            var query = queryParams.join('&');
+            var url = path + query;
+            window.location.href= url;
+        } else if(map.access_token!=null){
+            //使用Access Token来获取用户的OpenID
+            var path = "https://graph.qq.com/oauth2.0/me?";
+            var queryParams = ['access_token='+map.access_token, 'callback=callback'];
+            var query = queryParams.join('&');
+            var url = path + query;
+            openImplict(url);
+        }
+    });
+
+    function qqLogin(openid, type) {
+        var post_url= url + '/userInfo!request.action';
+
+        var params = {
+            "userid": "",
+            "token": "",
+            "method": "thirdLogin",
+            "params": {
+                "uniqueId": openid,
+                "type": type
+            }
+        };
+
+        $.ajax({
+            type: "POST",
+            url: post_url,
+            data: toData(params),
+            dataType: "json",
+            success: function (data) {
+
+                //第一次登录跳转绑定手机号
+                if(data.status.code == 313){
+                    location.href = "otherBind.html?openid="+openid+"&type="+type;
+                    return;
+                }
+
+                if(data.status.code!=200){
+                    alert(data.status.message);
+                    return;
+                }
+
+                //不是第一次保存信息跳转首页
+                setUserInfo(data.result);
+                location.href = "index.html";
+            }
+        });
+    }
+
+    //切割字符串转换参数表
+    function toParamMap(str){
+        var map = {};
+        var segs = str.split("&");
+        for(var i in segs){
+            var seg = segs[i];
+            var idx = seg.indexOf('=');
+            if(idx < 0){
+                continue;
+            }
+            var name = seg.substring(0, idx);
+            var value = seg.substring(idx+1);
+            map[name] = value;
+        }
+        return map;
+    }
+
+    //隐式获取url响应内容(JSONP)
+    function openImplict(url){
+        var script = document.createElement('script');
+        script.src = url;
+        document.body.appendChild(script);
+    }
+
+
+    //获得openid的回调
+    function callback(obj){
+        var openid = obj.openid;
+        qqLogin(openid, 1);
+
+//        //向服务端传输access_token及openid参数
+//        location.href=redirectURI + "?#access_token=" + map.access_token + "&openid=" + openid;
+    }
+
+</script>
+</body>
+</html>

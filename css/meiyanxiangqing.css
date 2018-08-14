@@ -1,0 +1,108 @@
+.myxq-wrap{
+    padding: 100px 0 0;
+}
+.myxq-wrap .container{
+    padding: 0 45px;
+}
+.myxq-wrap .goods .container{
+    position: relative;
+}
+.myxq-wrap .goods h1{
+    font-size: 46px;
+    color: #27384D;
+    font-weight: 400;
+}
+.myxq-wrap .goods a{
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    width: 152px;
+    height: 52px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.myxq-wrap .section{
+    margin-top: 87px;
+    color: #718398;
+    font-size: 16px;
+}
+.myxq-wrap .section h2{
+    font-size: 42px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.myxq-wrap .img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.myxq-wrap .fangfan h2{
+    margin-top: 100px;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 100;
+}
+.myxq-wrap .fangfan p{
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+.blue{
+    color: #47ABF3;
+}
+
+.myxq-wrap .tongji{
+    padding: 128px 0 0;
+    margin: 0 auto;
+    width: 810px;
+}
+.myxq-wrap .tongji dl{
+    float: left;
+    margin-top: 84px;
+    margin-left: 135px;
+    width: 180px;
+}
+.myxq-wrap .tongji dl:nth-child(3n+1){
+    margin-left: 0;
+}
+.myxq-wrap .tongji dl:nth-child(-n+3){
+    margin-top: 0;
+}
+.myxq-wrap .tongji dt{
+    font-size: 42px;
+    color: #718398;
+    text-align: center;
+}
+.myxq-wrap .tongji dd{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #718398;
+    text-align: center;
+}
+
+.myxq-wrap .faxian{
+    overflow: hidden;
+    height: 524px;
+    background: transparent url("../images/myxq-faxian.jpg") no-repeat scroll center bottom;
+    background-size: auto 100%;
+}
+.myxq-wrap .faxian h2{
+    margin: 190px auto 0;
+    width: 815px;
+    font-size: 42px;
+    font-weight: 100;
+    color: #718398;
+    text-align: center;
+    line-height: 72px;
+}
+
+
+
+
+
+
+
+
+
+

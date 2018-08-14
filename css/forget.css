@@ -1,0 +1,71 @@
+.forget-box{
+    padding: 64px 171px 34px;
+    margin: 0 auto;
+    width: 670px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px 0 rgba(0,0,0,0.15);
+}
+.forget-box>div{
+    position: relative;
+    padding: 24px 0;
+}
+.forget-box>div>input{
+    width: 100%;
+}
+.forget-box .title{
+    text-align: right;
+}
+.forget-box .title img{
+    float: left;
+    width: 123px;
+    height: 65px;
+    vertical-align: top;
+}
+.forget-box .title b{
+    display: inline-block;
+    width: 50%;
+    height: 65px;
+    line-height: 65px;
+    text-align: right;
+    font-size: 24px;
+    color: #666666;
+    font-weight: 400;
+    border-left: 1px solid #D9D9D9;
+}
+.forget-box .mcode-box input{
+    width: 50%;
+}
+.forget-box .mcode-box a{
+    margin-top: 2px;
+    float: right;
+    width: 40%;
+}
+.forget-box .submit a.btn-block{
+    height: 46px;
+    line-height: 34px;
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.forget-box .alert{
+    padding: 0;
+}
+.forget-box .alert .error{
+    display: none;
+    height: 21px;
+    line-height: 21px;
+}
+.forget-box .alert .error i{
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 6px;
+    vertical-align: middle;
+    color: #F25484;
+}
+.allright{
+    margin-top: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #666666;
+}

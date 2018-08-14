@@ -1,0 +1,107 @@
+.guanyu-wrap{
+    background: #F4F7F9;
+}
+.guanyu-wrap .guanyu-banner{
+    overflow: hidden;
+    width: 100%;
+    height: 340px;
+    background: transparent url("../images/team.jpg") no-repeat scroll center;
+    background-size: cover;
+}
+.guanyu-wrap .guanyu-banner h3{
+    margin-top: 159px;
+    color: #ffffff;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 200;
+}
+.guanyu-wrap>div .container{
+    padding: 50px 0;
+}
+.guanyu-wrap .gybox{
+    margin: 0 auto;
+    padding: 50px;
+    width: 846px;
+    min-height: 400px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+.guanyu-wrap .gybox .gytitle{
+    text-align: center;
+    border-bottom: 1px solid #D9D9D9;
+}
+.guanyu-wrap .gybox .gytitle a{
+    display: inline-block;
+    padding: 12px 10px;
+    font-size: 22px;
+    color: #27384D;
+    border-bottom: 5px solid #fff;
+}
+.guanyu-wrap .gybox .gytitle a{
+    margin-right: 43px;
+    padding: 17px 6px;
+    display: inline-block;
+    font-size: 22px;
+    color: #27384D;
+    border-bottom: 5px solid #fff;
+}
+.guanyu-wrap .gybox .gytitle a:last-child{
+    margin-right: 0;
+}
+.guanyu-wrap .gybox .gytitle a.active{
+    border-bottom: 5px solid #4fb1f7;
+}
+.guanyu-wrap .gybox .gyconent{
+    padding: 43px 0;
+    /*padding-bottom: 100px;*/
+    font-size: 14px;
+    color: #666666;
+    line-height: 26px;
+}
+.guanyu-wrap .gybox .gyconent img{
+    margin: 32px auto;
+    display: block;
+}
+.guanyu-wrap .gybox .gyconent p{
+    padding-bottom: 20px;
+    text-indent: 28px;
+}
+
+/*关于基因检测*/
+.guanyu-wrap .guanyujiance .gybox h3{
+    color: #27384D;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+.guanyu-wrap .guanyujiance .gybox a{
+    color: #4FB1F7;
+}
+
+.guanyu-wrap .guanyujianceitem .gybox{
+    padding: 50px 32px;
+}
+.guanyu-wrap .guanyujianceitem .gybox>h3{
+    color: #27384D;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+.guanyu-wrap .guanyujianceitem .gybox .loca a{
+    color: #4FB1F7;
+}
+.guanyu-wrap .guanyujianceitem .gybox .question{
+    padding: 30px 0 0 0;
+}
+.guanyu-wrap .guanyujianceitem .gybox .question h4{
+    font-size: 18px;
+    color: #27384D;
+    font-weight: 400;
+}
+.guanyu-wrap .guanyujianceitem .gybox .question .qcontent{
+    padding: 30px;
+    font-size: 14px;
+    color: #999999;
+}
+

@@ -1,0 +1,99 @@
+.shequlist-wrap{
+    background: #F4F7F9;
+}
+.shequlist-wrap .container{
+    padding: 50px 45px;
+}
+.shequlist-wrap .tzbox{
+    padding: 40px 35px 0;
+    background: #FFFFFF;
+    border: 1px solid #EDEFF1;
+    border-radius: 4px;
+}
+.shequlist-wrap .tzbox .title{
+    position: relative;
+    padding: 0 0 10px 24px;
+    font-size: 15px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.shequlist-wrap .tzbox .title .publish{
+    position: absolute;
+    top: -22px;
+    right: 0;
+    padding: 8px 0;
+    width: 127px;
+    color: #ffffff;
+}
+.shequlist-wrap .tzbox .conten{
+    width: 100%;
+}
+.shequlist-wrap .tzbox a{
+    color: #4FB1F7;
+}
+.shequlist-wrap .tzbox a.disable{
+    color: #666666;
+}
+.shequlist-wrap .tzbox .conten .item{
+    padding: 20px 0;
+    font-size: 0;
+    letter-spacing: -3px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.shequlist-wrap .tzbox .conten .item>div{
+    display: inline-block;
+    padding-left: 24px;
+    height: 50px;
+    color: #999999;
+    vertical-align: top;
+    font-size: 14px;
+    letter-spacing: normal;
+}
+.shequlist-wrap .tzbox .conten .item .tzimg{
+    width: 74px;
+}
+.shequlist-wrap .tzbox .conten .item .tzimg img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.shequlist-wrap .tzbox .conten .item .tzname{
+    width: 825px;
+}
+.shequlist-wrap .tzbox .conten .item .tzname p{
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shequlist-wrap .tzbox .conten .item .tzname p:last-child{
+    margin-top: 10px;
+}
+
+.shequlist-wrap .tzbox .conten .item .tzdata{
+    width: 139px;
+}
+.shequlist-wrap .tzbox .conten .item .tzdata p{
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+}
+.shequlist-wrap .tzbox .conten .item .tzdata p:last-child{
+    margin-top: 10px;
+}
+.shequlist-wrap .tzbox .conten .item .tzdata p a{
+    margin-left: 14px;
+    color: #999999;
+    cursor: default;
+}
+.shequlist-wrap .tzbox .conten .item .tzdata p a i{
+    margin-right: 9px;
+    font-size: 15px;
+}
+.shequlist-wrap .tzbox .foot{
+    margin-right: 9px;
+    padding: 20px 0;
+    font-size: 15px;
+}

@@ -1,0 +1,219 @@
+.goumaiorder-wrap{
+    background: #F4F7F9;
+}
+.goumaiorder-wrap .goods{
+    background: #ffffff;
+}
+.goumaiorder-wrap .goods .container{
+    padding: 40px 270px;
+}
+.goumaiorder-wrap .goods .container div{
+    float: left;
+    height: 118px;
+    line-height: 118px;
+}
+.goumaiorder-wrap .goods .img{
+    width: 118px;
+}
+.goumaiorder-wrap .goods .img img{
+    width: 100%;
+    height: 100%;
+}
+.goumaiorder-wrap .goods .name{
+    padding-left: 18px;
+    width: 215px;
+    color: #4FB1F7;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.goumaiorder-wrap .goods .amount{
+    padding-left: 18px;
+    width: 165px;
+}
+.goumaiorder-wrap .goods .price{
+    position: relative;
+    width: 162px;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.goumaiorder-wrap .goods .price .total{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #F25484;
+}
+
+.goumaiorder-wrap .infobox{
+    padding: 50px;
+}
+.goumaiorder-wrap .infobox .container{
+    padding: 0 270px;
+}
+.goumaiorder-wrap .infobox .orderbox{
+    padding: 50px 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+}
+.goumaiorder-wrap .infobox .orderbox .title h3{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    color: #27384D;
+}
+.goumaiorder-wrap .infobox .orderbox .conten{
+    padding: 60px 142px 0 128px;
+}
+.goumaiorder-wrap .infobox .orderbox .conten>div{
+    text-align: center;
+}
+.goumaiorder-wrap .infobox .orderbox .conten .icon{
+    padding-bottom: 70px;
+}
+.goumaiorder-wrap .infobox .orderbox .conten .icon span{
+    font-size: 40px;
+    color: #3DBD7D;
+}
+.goumaiorder-wrap .infobox .orderbox .conten .number{
+    padding-bottom: 50px;
+}
+.goumaiorder-wrap .infobox .orderbox .conten .number span{
+    color: #4FB1F7;
+}
+.goumaiorder-wrap .infobox .orderbox .conten .look a{
+    padding: 0;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.goumaiorder-wrap .infobox .addressbox .conten div label{
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+.goumaiorder-wrap .infobox .addressbox .conten div input{
+    width: 300px;
+}
+.goumaiorder-wrap .infobox .addressbox .conten div .select{
+    display: inline-block;
+    width: 90px;
+}
+
+.goumaiorder-wrap .infobox .paybox{
+    margin-top: 30px;
+    padding: 50px 0 32px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+}
+.goumaiorder-wrap .infobox .paybox .title h3{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    color: #27384D;
+}
+.goumaiorder-wrap .infobox .paybox .conten{
+    padding: 60px 142px 0 128px;
+}
+.goumaiorder-wrap .infobox .paybox .conten>div{
+    padding-bottom: 18px;
+}
+.goumaiorder-wrap .infobox .paybox .conten>div .msg{
+    margin-top: 10px;
+    padding-left: 88px;
+    font-size: 12px;
+    color: #999999;
+    line-height: 17px;
+}
+.goumaiorder-wrap-wrap .infobox .paybox .conten>div .type{
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.goumaiorder-wrap .infobox .paybox .conten div input{
+    width: 300px;
+}
+.goumaiorder-wrap .infobox .paybox .conten div .select{
+    display: inline-block;
+    width: 90px;
+}
+.goumaiorder-wrap .infobox .paybox .conten .paytype .rzfb,.goumaiorder-wrap .infobox .paybox .conten .paytype .rwx{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 10px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #E6E6E6;
+    border-radius: 4px;
+}
+.goumaiorder-wrap .infobox .paybox .conten .paytype .rzfb.active,.goumaiorder-wrap .infobox .paybox .conten .paytype .rwx.active{
+    border: 2px solid #56ABFC;
+}
+.goumaiorder-wrap .infobox .paybox .conten .paytype .rzfb i{
+    font-size: 26px;
+    color: #56ABFC;
+    vertical-align: middle;
+}
+
+.goumaiorder-wrap .infobox .paybox .conten .paytype .rwx i{
+    font-size: 30px;
+    color: #19D100;
+    vertical-align: middle;
+}
+.radiobox{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.radiobox input[type=radio] + i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: transparent url("../images/radio.png") no-repeat;
+    background-size: 32px 16px;
+    background-position: 0 0;
+}
+.radiobox input[type=radio]:checked + i{
+    background-position: -16px 0;
+}
+.goumaiorder-wrap .infobox .submitbox{
+    margin-top: 18px;
+    padding: 33px;
+    text-align: right;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+}
+.goumaiorder-wrap .infobox .submitbox span{
+    vertical-align: middle;
+}
+.goumaiorder-wrap .infobox .submitbox .total-price{
+    float: left;
+    margin-top: 15px;
+}
+.goumaiorder-wrap .infobox .submitbox .pay-price{
+    color: #47ABF3;
+    font-size: 18px;
+}
+.goumaiorder-wrap .infobox .submitbox .submit{
+    margin-left: 18px;
+}
+.goumaiorder-wrap .infobox .submitbox .submit a{
+    padding: 0;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
