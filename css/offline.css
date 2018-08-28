@@ -1,0 +1,32 @@
+.wrapper{ color: #000000;}
+.section{ margin: 0 auto; width: 1190px; height: 1700px; overflow: hidden;}
+.top{ background: url("../images/offline_page1.png") no-repeat scroll center;}
+
+.cover{ position: relative; background: url("../images/offline_cover.png") no-repeat scroll center;}
+.cover .info{ position: absolute; top: 97px; right: 100px; width: 212px; font-size: 20px;}
+.cover .title{ margin: 238px auto 0; width: 729px; font-size: 64px;}
+.cover .title .h2{ text-align: right; font-size: 48px;}
+
+.page1{ background: url("../images/offline_page1.png") no-repeat scroll center;}
+.page2{ background: url("../images/offline_page2.png") no-repeat scroll center;}
+
+.message{ padding-top: 198px;}
+.message .img{ margin-bottom: 93px; text-align: center;}
+.message .box{ margin: 0 auto; width: 968px;}
+.message .box>div{ float: left; width: 444px; border-top: 1px solid #979797;}
+.message .box>div:first-child{ margin-right: 66px; border-top: 1px solid #000000;}
+.message .box .h3{ padding: 16px 0; font-size: 36px; border-bottom: 1px solid #979797;}
+.message .box .conten{ padding: 20px 0 0 0; font-size: 18px; line-height: 28px; text-align: justify;}
+.message .box .conten p{ padding-bottom: 20px;}
+.message .box .tips .conten{ padding-left: 20px;}
+.message .box .tips .conten ul{ list-style: disc;}
+.message .box .tips .conten ul li{ padding-bottom: 20px;}
+.message .box .tips .letter-end{ padding: 16px 0; font-size: 18px; border-bottom: 1px solid #979797;}
+
+
+
+
+
+
+
+
