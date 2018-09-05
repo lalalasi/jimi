@@ -45,7 +45,7 @@ function login(username,password,keep) {
 
     loginHttp(params,function (status,re) {
         if(status != "SUCCESS"){
-            if(re.status.code == 305){
+            if(re.status.code == 305 || re.status.code == 303){
                 accErroMsg(re.status.message);
                 return;
             }

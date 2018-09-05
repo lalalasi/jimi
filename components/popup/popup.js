@@ -20,7 +20,7 @@ window.closeLoader = function(msg){
 }
 window.alert = function(msg){
     $("#mbg").show();
-    $("#popmsg").fadeIn(200).find(".tis").html(msg);
+    $("#popmsg").fadeIn(200).find(".tis").text(msg);
 }
 window.closePmsg = function(){
     $("#mbg").hide();

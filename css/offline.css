@@ -1,14 +1,27 @@
 .wrapper{ color: #000000;}
-.section{ margin: 0 auto; width: 1190px; height: 1700px; overflow: hidden;}
-.top{ background: url("../images/offline_page1.png") no-repeat scroll center;}
+.section{ margin: 0 auto; width: 1200px; height: 1682px; overflow: hidden;}
+.top{ background: url("../images/bg_top.png") no-repeat scroll center 1px;}
+.f36{ font-size: 36px;}
+.f26{ font-size: 26px;}
+.f24{ font-size: 24px;}
+table{ width: 100%;}
+table tr:nth-child(odd){ background: #E8E8E8;}
+table tr td{ padding: 13px 20px; font-size: 16px;}
+table tr td:nth-child(2) span{ display: inline-block; margin-right: 18px; width: 12px; height: 12px; border-radius: 6px;}
+.green{ background: #A9C551;}
+.orange{ background: #F29700;}
+.red{ background: #DB4E61;}
+.di{ color: #A9C551;}
+.zhong{ color: #F29700;}
+.gao{ color: #DB4E61;}
 
 .cover{ position: relative; background: url("../images/offline_cover.png") no-repeat scroll center;}
 .cover .info{ position: absolute; top: 97px; right: 100px; width: 212px; font-size: 20px;}
 .cover .title{ margin: 238px auto 0; width: 729px; font-size: 64px;}
 .cover .title .h2{ text-align: right; font-size: 48px;}
 
-.page1{ background: url("../images/offline_page1.png") no-repeat scroll center;}
-.page2{ background: url("../images/offline_page2.png") no-repeat scroll center;}
+.page1{ background: #C95866 url("../images/offline_page1.png") no-repeat scroll center;}
+.page2{ background: #C95866 url("../images/offline_page2.png") no-repeat scroll center;}
 
 .message{ padding-top: 198px;}
 .message .img{ margin-bottom: 93px; text-align: center;}
@@ -23,10 +36,31 @@
 .message .box .tips .conten ul li{ padding-bottom: 20px;}
 .message .box .tips .letter-end{ padding: 16px 0; font-size: 18px; border-bottom: 1px solid #979797;}
 
+.outline{ padding-top: 156px;}
+.outline .f24{ padding: 0 95px;}
+.outline img{ display: block; margin: 50px auto 69px;}
+.outline .box{ padding: 0 178px;}
+.outline .box .tab{ margin-bottom: 91px;}
+.outline .box .tab span{ display: block; padding: 7px 20px; width: 236px; font-size: 26px; color: #DB4E61; border: 2px solid #E3007E;}
+.outline table td{ padding-left: 88px;}
 
+.item{ padding: 116px 100px 0;}
+.result{ float: right; padding-left: 45px; width: 500px;}
+.result .name{ display: inline-block; padding: 7px 20px; font-size: 26px; color: #DB4E61; border: 2px solid #E3007E;}
+.result .text{ padding: 40px 0;}
 
+.row .echarts{ position: relative; float: left; width: 500px;}
+.row .echarts .hr{ position: absolute; top: 0; right: 0; width: 2px;}
+.row .list{ float: left; padding-left: 45px; width: 500px;}
+.row .title{ margin-bottom: 20px; line-height: 28px; font-size: 16px;}
 
+.summary{ margin-top: 50px; }
+.summary .title{ padding: 19px 0;}
+.summary .conten>div{ float: left; width: 500px; min-height: 664px;}
+.summary .conten .left{ position: relative; padding-right: 46px;}
+.summary .conten .left .hr{ position: absolute; top: 0; right: 0; width: 2px;}
+.summary .conten .right{ padding-left: 46px;}
+.summary .conten img{ margin-bottom: 20px; width: 100%;}
+.summary .conten p{ margin-bottom: 30px; line-height: 28px; font-size: 16px;}
 
-
-
-
+.cover2{ background: url("../images/offline_footer.png") no-repeat scroll center;}
