@@ -19,6 +19,7 @@
 		}
 		.gerenbaogao-wrap {
    			 padding: 0 0;
+             color: #000000;
    			 background: #FFFFFF;
     	}
 		.gerenbaogao-wrap .container{
@@ -58,8 +59,8 @@
         /*}*/
         /*.cover h3{ font-weight: 800 !important;}*/
         .gerenbaogao-wrap .section.cover{ height: 1682px; overflow: hidden; position: relative; background: #FFFFFF;}
-        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 97px; right: 100px; width: 212px; font-size: 20px;}
-        .gerenbaogao-wrap .section.cover .title{ margin: 238px auto 0; width: 729px; font-size: 64px;}
+        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 345px; left: 220px; width: 212px; font-size: 20px;}
+        .gerenbaogao-wrap .section.cover .title{ margin: 238px auto 0; width: 800px; font-size: 64px;}
         .gerenbaogao-wrap .section.cover .title .h2{ text-align: right; font-size: 48px;}
 
         
@@ -101,7 +102,7 @@
              margin-bottom: 13px;
 		 }
 
-         .cover #userName{ color: #4fb1f7;}
+         /*.cover #userName{ color: #4fb1f7;}*/
          table{ margin: 0 auto;}
         .logo{ margin-bottom: 200px; text-align: left;}
         .logo img{ width: 140px;}
@@ -165,12 +166,16 @@
                 location.href = 'meiyanOffline.html?reportId='+userSampleOfflineId;
                 return;
             } else if(re.result.goodsId == 2){
+                $("#reportType").text("常见慢性病风险评估");
                 $(".cover").css("background-image","url('images/cover_mb.png')");
             } else if(re.result.goodsId == 3){
+                $("#reportType").text("营养需求评估");
                 $(".cover").css("background-image","url('images/cover_et.png')");
             } else if(re.result.goodsId == 4){
+                $("#reportType").text("高发癌症风险预测");
                 $(".cover").css("background-image","url('images/cover_ab.png')");
             } else {
+                $("#reportType").text("精准瘦身指导");
                 $(".cover").css("background-image","url('images/cover_ss.png')");
             }
 
@@ -386,7 +391,7 @@
                     <div>报告生成：<span id="createTime">2018-08-09</span></div>
                 </div>
                 <div class="title">
-                    <div class="h1" style="font-family: '幼圆';"><span style="font-family: arial;">“</span><span id="userName" style="font-family: '幼圆';">XXX</span>精准护肤指导</div>
+                    <div class="h1" style="font-family: '幼圆';"><span style="font-family: arial;">“</span><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
                     <div class="h2" style="font-family: '幼圆';">基因检测报告<span style="font-family:arial;">”</span></div>
                 </div>
             </div>
