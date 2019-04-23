@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>己秘 - 个人基因组检测与分析平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/gerenbaogao.css">
+
+    <!--脚本加载-->
+    <script src="js/config.js"></script>
+    <style type="text/css">
+	    .container {
+            width: 1200px;
+	    	margin: 0 auto;
+		}
+		.gerenbaogao-wrap {
+   			 padding: 0 0;
+             color: #000000;
+   			 background: #FFFFFF;
+    	}
+		.gerenbaogao-wrap .container{
+			padding: 0 0;
+		}
+		
+		.gerenbaogao-wrap .panel .section {
+   			 border:0;
+   			 margin-bottom: 0px;
+   			 background: #FFFFFF;
+		}
+        .gerenbaogao-wrap .panel .section p{
+            color: #000000;
+        }
+
+		.gao {
+		    color: #F25484;
+		}
+		
+		.zhong {
+   			 color: #4FB1F7;
+		}
+		
+		.di {
+    		color: #228B22;
+		}
+
+		.gerenbaogao-wrap .panel .baogao-result .result p.di {
+		    color: #228B22;
+		}
+
+        /*.gerenbaogao-wrap .section.cover{*/
+       		/*min-height: 1532px;*/
+            /*text-align: center;*/
+            /*background: url("images/r_cover.jpg") no-repeat center;*/
+            /*background-size: 100% 100%*/
+        /*}*/
+        /*.cover h3{ font-weight: 800 !important;}*/
+        .gerenbaogao-wrap .section.cover{ height: 1682px; overflow: hidden; position: relative; background: #FFFFFF;}
+        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 355px; left: 200px; width: 212px; font-size: 20px;}
+        .gerenbaogao-wrap .section.cover .title{ margin: 238px auto 0; width: 800px; font-size: 64px;}
+        .gerenbaogao-wrap .section.cover .title .h2{ text-align: right; font-size: 48px;}
+
+        
+        .gerenbaogao-wrap .panel .section h3 {
+    		font-size: 70px;
+		 }
+
+		.gerenbaogao-wrap .panel .section h4 {
+		    padding: 40px 0 20px;
+		    font-size: 28px;
+		    font-weight: 500;
+		    color: #000000;
+		    text-align: center;
+		}
+
+        .gerenbaogao-wrap .panel .testbox{
+            margin: 30px 0 0;
+        }
+		.gerenbaogao-wrap .panel .testbox .testlist {
+		    font-size: 20px;
+            color: #000000;
+	    }
+
+        .gerenbaogao-wrap .panel .baogao-result{
+            margin: 0;
+        }
+
+		.gerenbaogao-wrap .panel .baogao-result .result p {
+		    font-size: 20px;
+		}
+
+		.gerenbaogao-wrap .panel .testbox h5 {
+   			 font-size: 24px;
+		}
+		
+		 .gerenbaogao-wrap .panel .section p {
+   			 font-size: 20px;
+   			 line-height: 35px;
+             margin-bottom: 13px;
+		 }
+
+         /*.cover #userName{ color: #4fb1f7;}*/
+         table{ margin: 0 auto;}
+        .logo{ margin-bottom: 200px; text-align: left;}
+        .logo img{ width: 140px;}
+
+    </style>
+    <script type="text/javascript">
+    var userSampleOfflineId = GetQueryString("reportId");
+
+    $(function () {
+        if(!userSampleOfflineId){
+        	alert("参数错误，请联系管理员");
+            return;
+        }
+        getReportInfo(userSampleOfflineId);
+    })
+
+    function getReportInfo(userSampleOfflineId) {
+        var params = {
+            "method": "getDetectItemList",
+            "userid": "",
+            "token": "",
+            "params": {
+                "userSampleOfflineId": userSampleOfflineId
+            }
+        };
+
+        userSampleHttp(params,function (status,re) {
+            if(status != "SUCCESS"){
+                erroMsg(re.status.message);
+                return;
+            }
+            $(".cover").css("background-image","url('images/cover_ss.png')");
+            //绑定参数
+            replaceReortInfo(re.result);
+        });
+    }
+    
+    function replaceReortInfo(data){
+    	$("#userName").html(data.name);//姓名
+    	$("#sampleCode").html(data.sampleCode);//样本编号
+    	$("#createTime").html(data.createTime);//创建时间
+    	
+    	//项目报告列表
+    	var goodsId=data.goodsId;
+    	var goodsStr='<table class="testlist" cellspacing="0" cellpadding="0" border="0"><tr class="th">';//报告结果列line-height: 24px;表
+    	var gaoList="";
+    	var zhongList="";
+    	var diList="";
+    	var otherList="";
+    	var reprotInfo=""; //报告总结信息
+    	var itemResultInfo="";//报告结果信息
+    	var gaoItemResultInfo="";
+    	var zhongItemResultInfo="";
+    	var diItemResultInfo="";
+    	var otherItemResultInfo="";
+    	if(goodsId==2||goodsId==4){
+    		goodsStr+='<td style="width: 20%">项目</td><td style="width: 20%">患病风险</td><td style="width: 30%">中国人平均终身患病风险%</td><td style="width: 30%">您的终身患病风险%</td> </tr>';
+    	}else if(goodsId==3){
+            goodsStr+='<td style="width: 50%">项目</td><td style="width: 50%">营养需求</td> </tr>';
+        }else{
+    		goodsStr+='<td style="width: 50%">项目</td><td style="width: 50%">代谢能力</td> </tr>';
+    	}
+    	for(var i=0;i<data.itemList.length;i++){
+    		var itemResult=data.itemList[i].itemResult;
+    		var resultClass='di';
+    		if(itemResult=='高'){
+    			resultClass='gao';
+    		}else if(itemResult=='中'){
+    			resultClass='zhong';
+    		}else if(itemResult=='低'){
+    			resultClass='di';
+    		}
+    		var goodsHeight="min-height: 3064px;";
+    		if(data.itemList[i].name=='吸烟损伤'||data.itemList[i].name=='乳糖'||data.itemList[i].name=='咖啡因'||data.itemList[i].name=='抑癌基因TP53'||data.itemList[i].name=='酒精'){
+    			goodsHeight="min-height: 1532px;";
+    		}
+    		var itemStr='<div class="section"  style="'+goodsHeight+'"><h4 class="reportName">'+data.itemList[i].name+'-【基因检测结果】</h4>'
+			+'<div class="baogao-result"><div class="result"><p class="state-desc">'+data.itemList[i].itemInfo+'</p>'
+			+'<p class="state '+resultClass+'">'+data.itemList[i].itemResult+'</p>';
+    		if(itemResult=='高'){
+    			gaoItemResultInfo+=itemStr;
+    		}else if(itemResult=='中'){
+    			zhongItemResultInfo+=itemStr;
+    		}else if(itemResult=='低'){
+    			diItemResultInfo+=itemStr;
+    		}else{
+    			otherItemResultInfo+=itemStr;
+    		}
+  			var str2='<tr><td>'+data.itemList[i].name+'</td><td class="'+resultClass+'">'+data.itemList[i].itemResult+'</td></tr>';
+  			if(itemResult=='高'){
+  	    		gaoList+=str2;
+  	    	}else if(itemResult=='中'){
+  	    		zhongList+=str2;
+  	    	}else if(itemResult=='低'){
+  	    		diList+=str2;
+  	    	}else{
+  	    		otherList+=str2;
+  	    	}
+  			
+    		if(reprotInfo.length<=0 && data.itemList[i].reportInfo!=null && data.itemList[i].reportInfo.length>0){
+				reprotInfo='<p>'+data.itemList[0].reportInfo+'</p>';
+			}
+    		
+    		var resultStr='';
+    		resultStr+='</div>';
+			if(data.itemList[i].itemResultDesc.length>0){
+				resultStr+='<div class="asc tips"><i class="iconfont icon-tishi"></i><p></p><p>'+data.itemList[i].itemResultDesc+'</p></div>';
+			}
+			resultStr+='</div>';
+			resultStr+='<div class="testbox"><h5>基因检测列表</h5><table class="testlist" cellspacing="0" cellpadding="0" border="0"><tr class="th"><td style="width: 30%">基因</td><td style="width: 30%">位点</td>';
+			resultStr+='<td style="width: 40%">检测结果</td></tr>';
+    		for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    			resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';
+    		}
+    		resultStr+='</table></div>';
+    		resultStr+=data.itemList[i].describe;
+
+            var wxstr1 = '<h4>参考文献</h4><div><ol style="padding-left: 20px; list-style: decimal; font-size: 20px;">';
+            if(data.itemList[i].name == '胃癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">A shared susceptibility locus in PLCE1 at 10q23 for gastric adenocarcinoma and esophageal squamous cell carcinoma.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">A comprehensive analysis of common genetic variation in MUC1, MUC5AC, MUC6 genes and risk of stomach cancer</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Polymorphisms in prostate stem cell antigen gene rs2294008 increase gastric cancer risk in Chinese</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Correlation between protein kinase catalytic subunit alpha-1 gene rs13361707 polymorphism and gastric cancer susceptibility in asian populations.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Promoter polymorphisms of IL2, IL4, and risk of gastric cancer in a high-risk Chinese population</li>';
+            }
+            if(data.itemList[i].name == '高血压'){
+                wxstr1 += '<li style="margin-bottom: 13px;">HSG/Mfn2 gene polymorphism and essential hypertension: a case-control association study in Chinese</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Association of renin-angiotensin and endothelial nitric oxide synthase gene polymorphisms with blood pressure progression and incident hypertension: prospective cohort study.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Common variants in or near FGF5, CYP17A1 and MTHFR genes are associated with blood pressure and hypertension in Chinese Hans. </li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Association of renin-angiotensin and endothelial nitric oxide synthase gene polymorphisms with blood pressure progression and incident hypertension: prospective cohort study.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variations in MOV10 and CACNB2 are associated with hypertension in a Chinese Han population</li>';
+            }
+            if(data.itemList[i].name == '高血脂'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Association of genetic variation on chromosome 9p21.3 and arterial stiffness.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Increase in HDL-C concentration by a dietary portfolio with soy protein and soluble fiber is associated with the presence of the ABCA1R230C variant in hyperlipidemic Mexican subjects.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">A genome-wide association study for blood lipid phenotypes in the Framingham Heart Study.</li>';
+            }
+            if(data.itemList[i].name == '肝癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Variants in ABCB1, TGFB1, and XRCC1 genes and susceptibility to viral hepatitis A infection in Mexican Americans</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variations in STAT4,C2,HLA-DRB1 and HLA-DQ associated with risk of hepatitis B virus-related liver cirrhosis</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Cancer risk in chronic hepatitis B: Do genome-wide association studies hit the mark?</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">hepatocellular carcinoma in Chinese populations</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">A Non-Synonymous Single Nucleotide Polymorphism in the HJURP Gene Associated with Susceptibility to Hepatocellular Carcinoma among Chinese.</li>';
+            }
+            if(data.itemList[i].name == '肺癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Single nucleotide polymorphisms in VTI1A gene contribute to the susceptibility of Chinese population to non-small cell lung cancer</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variations in TERC and TERT genes are associated with lung cancer risk in a Chinese Han population.</li>';
+            }
+            if(data.itemList[i].name == '胰腺癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Genome-wide association study identifies five loci associated with susceptibility to pancreatic cancer in Chinese populations</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Lack of replication of seven pancreatic cancer susceptibility lociidentified in two Asian populations</li>';
+            }
+            if(data.itemList[i].name == '甲状腺'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Genome-wide association and expression quantitative trait loci studies identify multiple susceptibility loci for thyroid cancer</li>';
+            }
+            if(data.itemList[i].name == '酒精代谢'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Molecular abnormality of an inactive aldehyde dehydrogenase variant commonly found in Orientals</li>';
+            }
+            if(data.itemList[i].name == '烟损伤'){
+                wxstr1 += '<li style="margin-bottom: 13px;">CYP1A1 rs1048943 and rs4646903 polymorphisms associated with laryngeal cancer susceptibility among Asian populations: a meta-analysis</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Impact of interaction between CYP1A1 genetic polymorphisms and smoking on coronary artery disease in the Han of China.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;"> Associations of CYP2E1 rs2031920 and rs3813867 polymorphisms with colorectal cancer risk: a systemic review and meta-analysis </li>';
+            }
+            if(data.itemList[i].name == '痛风'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Serum urate gene associations with incident gout, measured in the Framingham Heart Study, are modified by renal disease and not by body mass index</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">The ABCG2 gene Q141K polymorphism contributes to an increased risk of gout: A meta-analysis of 2185 cases</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variation in the ABCG2 gene is associated with gout risk in the Chinese Han population</li>';
+            }
+            if(data.itemList[i].name == '钙吸收'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Vitamin D receptor polymorphisms and survival in patients with cutaneous melanoma: A population-based study</li>';
+            }
+            if(data.itemList[i].name == '阿尔兹海默症'){
+                wxstr1 += '<li style="margin-bottom: 13px;"> An APOE Haplotype Associated with Decreased ?4 Expression Increases the Risk of Late Onset Alzheimer\'s Disease </li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Variation at APOE and STH loci and Alzheimer\'s disease.</li>';
+            }
+            if(data.itemList[i].name == '子宫内膜癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Genome-wide association study identifies a possible susceptibility locus for endometrial cancer.</li>';
+            }
+            if(data.itemList[i].name == '叶酸'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Functional Polymorphisms in Folate Metabolism Genes Influence the Risk of Meningioma and Glioma</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Folate metabolism genetic polymorphisms and meningioma and glioma susceptibility in adults</li>';
+            }
+            if(data.itemList[i].name == '糖尿病'){
+                wxstr1 += '<li style="margin-bottom: 13px;">A missense mutation of Pax4 gene (R121W) is associated with type 2 diabetes in Japanese</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Replication study of novel risk variants in six genes with type 2 diabetes and related quantitative traits in the Han Chinese lean individuals</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variants on chromosome 6p21.1 and 6p22.3 are associated with type 2 diabetes risk: a case-control study in Han Chinese</li>';
+            }
+            if(data.itemList[i].name == '乳腺癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Common variants on chromosomes 2q35 and 16q12 confer susceptibility to estrogen receptor-positive breast cancer</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variants of fibroblast growth factor receptor 2 (FGFR2) are associated with breast cancer risk in Chinese women of the Han nationality</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Risk of aggressive breast cancer in women of Han nationality carrying TGFB1 rs1982073 C allele and FGFR2 rs1219648 G allele in North China</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genome-wide association study identifies a new breast cancer susceptibility locus at 6q25.1</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Risk of genome-wide association study newly identified genetic variants for breast cancer in Chinese women of Heilongjiang Province</li>';
+            }
+            if(data.itemList[i].name == '乳糖不耐受'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Lactase persistence and lipid pathway selection in the Maasai</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Lactase persistence genotypes and malaria susceptibility in Fulani of Mali.</li>';
+            }
+            if(data.itemList[i].name == '前列腺癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Cumulative Association of Five Genetic Variants with Prostate Cancer</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Systematic confirmation study of reported prostate cancer risk-associated single nucleotide polymorphisms in Chinese men</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">8q24 and prostate cancer: association with advanced disease and meta-analysis.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Multiple newly identified loci associated with prostate cancer susceptibility</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Fine mapping association study and functional analysis implicate a SNP in MSMB at 10q11 as a causal variant for prostate cancer risk.</li>';
+            }
+            if(data.itemList[i].name == '卵巢癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Ovarian cancer variant rs2072590 is associated with HOXD1 and HOXD3 gene expression</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Replication Study for the Association of Seven Genome-Gwas-Identified Loci With Susceptibility to Ovarian Cancer in the Polish Population</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Association between single-nucleotide polymorphisms in hormone metabolism and DNA repair genes and epithelial ovarian cancer: results from two Australian studies and an additional validation set</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">ESR1/SYNE1 polymorphism and invasive epithelial ovarian cancer risk: an Ovarian Cancer Association Consortium study</li>';
+            }
+            if(data.itemList[i].name == '咖啡因'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Coffee consumption, genetic susceptibility and bladder cancer risk</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Coffee, Caffeine Metabolism Genotype, and Disease Progression in Localized Prostate Cancer Patients Managed with Active Surveillance</li>';
+            }
+            if(data.itemList[i].name == '结直肠癌'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Susceptibility genetic variants associated with early-onset colorectal cancer.</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">confirmed to increase risk for colorectal cancer in a study of 4,000 UK cases.</li>';
+            }
+            if(data.itemList[i].name == '肥胖'){
+                wxstr1 += '<li style="margin-bottom: 13px;">The FTO gene rs9939609 obesity-risk allele and loss of control over eating</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Investigation of the Locus Near MC4R With Childhood Obesity in Americans of European and African Ancestry</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Association of FTO Polymorphisms with Obesity and Metabolic Parameters in Han Chinese Adolescents</li>';
+            }
+            if(data.itemList[i].name == '抑癌基因TP53'){
+                wxstr1 += '<li style="margin-bottom: 13px;">Single nucleotide polymorphisms in the TP53 region and susceptibility to invasive epithelial ovarian cancer</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">TP53 genetic polymorphisms, interactions with lifestyle factors and lung cancer risk: a case control study in a Chinese population</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Counting potentially functional variants in BRCA1, BRCA2 and ATM predicts breast cancer susceptibility</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genotype and haplotype analysis of TP53 gene and the risk of pancreatic cancer: an association study in the Czech Republic</li>';
+                wxstr1 += '<li style="margin-bottom: 13px;">Genetic variation in TP53 and risk of breast cancer in a population-based case control study</li>';
+            }
+            wxstr1 += '</ol></div>'
+
+            resultStr += wxstr1;
+            resultStr+='</div>';
+
+    		if(itemResult=='高'){
+    			gaoItemResultInfo+=resultStr;
+    		}else if(itemResult=='中'){
+    			zhongItemResultInfo+=resultStr;
+    		}else if(itemResult=='低'){
+    			diItemResultInfo+=resultStr;
+    		}else{
+    			otherItemResultInfo+=resultStr;
+    		}
+
+    	}
+    	goodsStr+=gaoList;
+    	goodsStr+=zhongList;
+    	goodsStr+=diList;
+    	goodsStr+=otherList;
+    	goodsStr+="</table>";
+    	goodsStr+=reprotInfo
+    	$("#itemListTable").html(goodsStr);
+    	itemResultInfo+=gaoItemResultInfo;
+    	itemResultInfo+=zhongItemResultInfo;
+    	itemResultInfo+=diItemResultInfo;
+    	itemResultInfo+=otherItemResultInfo;
+    	$("#itemResultInfo").html(itemResultInfo);
+    }
+
+    /** 请求 **/
+    function userSampleHttp(data, callback) {
+        var url_userSample = url + "/userSampleOfflineServer!request.action";
+        httpRequest(url_userSample, data, callback);
+    }
+    
+    </script>
+</head>
+<body>
+<div id="content" class="gerenbaogao-wrap">
+    <div class="container clearfix">
+        <div class="panel">
+            <div class="section cover">
+                <div class="info">
+                    <div>样本报告：<span id="sampleCode">S60</span></div>
+                    <div>报告生成：<span id="createTime">2018-08-09</span></div>
+                </div>
+                <div class="title">
+                    <div class="h1" style="font-family: '幼圆';"><span style="font-family: arial;"></span><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
+                    <div class="h2" style="font-family: '幼圆';">基因检测报告<span style="font-family:arial;"></span></div>
+                </div>
+            </div>
+            <!--<div class="section cover">-->
+                <!--<div class="logo"><img src="images/logo.png"></div>-->
+           	    <!--<h3><span id="userName"></span>&nbsp;&nbsp;基因检测报告</h3>-->
+                <!--<p>样本编号：<span id="sampleCode"></span>&nbsp;&nbsp;&nbsp;&nbsp;报告日期：<span id="createTime"></span></p>-->
+            <!--</div>-->
+            <div class="section" style="min-height: 1532px;">
+            	<h4 class="reportName">卷首语</h4>
+                <p>尊敬的 先生/女士：</p>
+                <p>这是最好的时代！己秘诚挚地为您献上现代科学赐予我们的最好礼物。2001年2月1 2日，由包括中国在内的6国的科学家共同公布了人类基因组图谱及初步分析结果。自200多万年前人类诞生以来，我们首次能在分子水平上解释生命的奥秘。人类基因组图谱的解读，预示着人手一份“人体生命说明书”的个性化医疗时代已经到来，我们将越来越了解人类自身之谜。</p>
+             	<p>基因信息与健康息息相关，诺贝尔医学奖获得者利根川进博士曾指出：人类除外伤以外的所有疾病都与基因有关！疾病或体质特征是由内因（基因）与外因（环境和习惯）共同作用的结果</p>
+             	<p>己秘始终致力于将前沿的生物技术运用于疾病的预防、诊断和治疗，提高全球个性化医疗水平。健康管理类基因检测旨在从遗传的角度解读基因数据，预测疾病风险和营养代谢能力，从而指导健康的生活方式，提升生活品质。拿喝酒举例来说，为什么有人千杯不醉，而有人一滴就倒？很大程度上取决于酒精代谢的基因不同，从而导致酒精代谢能力不同。而这样的例子仅仅是人类2万多个基因中的1个。现代科学研究表明人与人之间基因的差异不到0.1%，而正是这不到0.1%的差异造就了你我的与众不同。</p>
+             	<p>对生命的探索是人类永恒的主题。伟大的古希腊哲学家亚里士多德曾说：智者始于自知。当我的基因密码被破译的时候，当我的巴特农神庙建立起来的时候，我从这遥远的地方也能感受到他的辉煌。</p>
+             	<p>未来已来。在这个风起云涌，激动人心的时代里己秘将与您一路同行！</p>
+            </div>
+            <div class="section" style="min-height: 1532px;">
+            	<h4 class="reportName">Preface</h4>
+            	<p>Dear Sir/Madam:</p>
+            	<p>This is the best of times! We are proud to offer you the best gift from modern science. On February 12, 2001, scientists from six countries, including China, published the human genome map and preliminary analysis of the results. We have been able to explain the mysteries of life for the first time at the molecular level since the birth of human from more than 2 million years ago. The interpretation of the human genome map indicates that the personalized medical age of the human life statement has come, and we will become more and more aware of the mystery of mankind itself.</p>
+            	<p>Genetic information and health are closely related, the Nobel Prize winner Dr. Reagan Chuanjin has pointed out: all human diseases,except for trauma,are related to genes .Disease or physical characteristics are the result of a combination of internal causes (genes) and external causes (environment and habit).</p>
+            	<p>GeneMe has always been committed to apply the most innovative biotechnology to the disease diagnosis, prevention and treatment, and to advance personalized medicine aroundthe world. Health management gene testing is to detect genetic data from a genetic perspective, predict disease risk and nutritional metabolic capacity, so as to guide healthy lifestyles and improve life quality . Take drinking for example, why some people can drink thousands of cups, and some people drop down? Largely depends on the alcohol metabolism of different genes, resulting in different metabolic capacity of alcohol. And this example is only one of more than 20,000 human genes. Modern scientific research shows that the difference between genes is less than 0.1%, and it is this difference of less than 0.1% created the unique you and me.</p>
+            	<p>The exploration of life is the eternal theme of mankind. The great ancient Greek philosopher Aristotle once said that knowing yourself is the beginning of all wisdom . When my genetic code was deciphered, when my Parthenon Temple was built, I could feel this splendor from the deep of my heart.</p>
+            	<p>Future is coming.In this surging and exciting era, we will be with you all the way!</p>
+            </div>            
+            <div class="section"  style="min-height: 1532px">
+                <h3 style="font-size: 40px;"><i class="iconfont icon-zhiyebingbaogaoshangbao"></i>健康管理基因检测报告</h3>
+                <div class="testbox" id="itemListTable">
+                </div>              
+            </div>
+            <div id="itemResultInfo">
+			</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -59,7 +59,7 @@
         /*}*/
         /*.cover h3{ font-weight: 800 !important;}*/
         .gerenbaogao-wrap .section.cover{ height: 1682px; overflow: hidden; position: relative; background: #FFFFFF;}
-        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 345px; left: 200px; width: 212px; font-size: 20px;}
+        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 355px; left: 200px; width: 212px; font-size: 20px;}
         .gerenbaogao-wrap .section.cover .title{ margin: 238px auto 0; width: 800px; font-size: 64px;}
         .gerenbaogao-wrap .section.cover .title .h2{ text-align: right; font-size: 48px;}
 
@@ -168,15 +168,19 @@
             } else if(re.result.goodsId == 2){
                 $("#reportType").text("常见慢性病风险评估");
                 $(".cover").css("background-image","url('images/cover_mb.png')");
+                $(".wenxian2").removeClass("hide");
             } else if(re.result.goodsId == 3){
                 $("#reportType").text("营养需求评估");
                 $(".cover").css("background-image","url('images/cover_et.png')");
+                $(".wenxian3").removeClass("hide");
             } else if(re.result.goodsId == 4){
                 $("#reportType").text("高发癌症风险预测");
                 $(".cover").css("background-image","url('images/cover_ab.png')");
+                $(".wenxian4").removeClass("hide");
             } else {
                 $("#reportType").text("精准瘦身指导");
                 $(".cover").css("background-image","url('images/cover_ss.png')");
+                $(".wenxian5").removeClass("hide");
             }
 
 
@@ -387,12 +391,12 @@
         <div class="panel">
             <div class="section cover">
                 <div class="info">
-                    <div>报告编号：<span id="sampleCode">S60</span></div>
-                    <div>报告日期：<span id="createTime">2018-08-09</span></div>
+                    <div>样本报告：<span id="sampleCode">S60</span></div>
+                    <div>报告生成：<span id="createTime">2018-08-09</span></div>
                 </div>
                 <div class="title">
-                    <div class="h1" style="font-family: '幼圆';"><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
-                    <div class="h2" style="font-family: '幼圆';">基因检测报告</div>
+                    <div class="h1" style="font-family: '幼圆';"><span style="font-family: arial;"></span><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
+                    <div class="h2" style="font-family: '幼圆';">基因检测报告<span style="font-family:arial;"></span></div>
                 </div>
             </div>
             <!--<div class="section cover">-->
@@ -413,8 +417,9 @@
                 <p>1.我们为您提供的信息是根据和你同样基因型的人群集体统计倾向性的结论，由于科学研究和技术的局限性，本次检测有可能未覆盖全部与疾病、特征相关的致病突变或多态性位点。随着科学研究的进展、技术的进步以及检测人数的增加，您的检测评估结果会不断优化。</p>
                 <p>2.基因检测结果不适用于临床医学范畴，健康状况、疾病的诊断、治疗用药，请务必咨询医生。</p>
                 <p>3.环境和生活习惯等因素，能够在不同程度上影响疾病的发生，所以未携带致病突变或者发病风险低并不意味着不会患病。</p>
-                <p>4.环境和生活习惯等因素，能够在不同程度上影响身体的特征表现，所以对于部分体质特征可能会出现表现形式和检测结果有出入，我们会根据统计样本的扩大不断优化检测结果。</p>
-                <p>5.检测结果只对送检样品负责，请务必正确绑定使用者信息。</p>
+                <p>4.可以参考标准普尔图酌情做财务准备</p>
+                <p>5.环境和生活习惯等因素，能够在不同程度上影响身体的特征表现，所以对于部分体质特征可能会出现表现形式和检测结果有出入，我们会根据统计样本的扩大不断优化检测结果。</p>
+                <p>6.检测结果只对送检样品负责，请务必正确绑定使用者信息。</p>
             </div>
             <div class="section"  style="min-height: 1532px">
                 <h3 style="font-size: 40px;"><i class="iconfont icon-zhiyebingbaogaoshangbao"></i>健康管理基因检测报告</h3>
@@ -423,8 +428,116 @@
             </div>
             <div id="itemResultInfo">
 			</div>
+
+            <!--营养指导-->
+            <div class="section wenxian3 hide"  style="min-height: 1532px">
+                <h4 style="text-align: left">参考文献</h4>
+                <div>
+                    <ol style="padding-left: 40px; list-style: decimal; font-size: 20px;">
+                        <li style="margin-bottom: 20px;">Identification of a common variant in the TFR2 gene implicated in the physiological regulation of serum iron levels.</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study identifies loci affecting blood copper, selenium and zinc.</li>
+                        <li style="margin-bottom: 20px;">Common variation in the beta-carotene 15,15'-monooxygenase 1 gene affects circulating levels of carotenoids: a genome-wide association study</li>
+                        <li style="margin-bottom: 20px;">Vitamin C transporter gene (SLC23A1 and SLC23A2) polymorphisms, plasma vitamin C levels, and gastric cancer risk in the EPIC cohort</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study of circulating vitamin D levels</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!--减肥-->
+            <div class="section wenxian5 hide"  style="min-height: 1532px">
+                <h4 style="text-align: left">参考文献</h4>
+                <div>
+                    <ol style="padding-left: 40px; list-style: decimal; font-size: 20px;">
+                        <li style="margin-bottom: 20px;">Imamura, M., Takahashi, A., Yamauchi, T., Hara, K., Yasuda, K., Grarup, N., ... & Moon, S. (2016). Genome-wide association studies in the Japanese population identify seven novel loci for type 2 diabetes. Nature communications, 7, 10531.</li>
+                        <li style="margin-bottom: 20px;">He, M., Xu, M., Zhang, B., Liang, J., Chen, P., Lee, J. Y., ... & Liang, L. (2014). Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci. Human molecular genetics, 24(6), 1791-1800.</li>
+                        <li style="margin-bottom: 20px;">Furberg, H., Kim, Y., Dackor, J., Boerwinkle, E., Franceschini, N., Ardissino, D., ... & Absher, D. (2010). Genome-wide meta-analyses identify multiple loci associated with smoking behavior. Nature genetics, 42(5), 441.</li>
+                        <li style="margin-bottom: 20px;">Speliotes, E. K., Willer, C. J., Berndt, S. I., Monda, K. L., Thorleifsson, G., Jackson, A. U., ... & Randall, J. C. (2010). Association analyses of 249,796 individuals reveal 18 new loci associated with body mass index. Nature genetics, 42(11), 937.</li>
+                        <li style="margin-bottom: 20px;">Thorleifsson, G., Walters, G. B., Gudbjartsson, D. F., Steinthorsdottir, V., Sulem, P., Helgadottir, A., ... & Jonsdottir, T. (2009). Genome-wide association yields new sequence variants at seven loci that associate with measures of obesity. Nature genetics, 41(1), 18.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!--美颜-->
+            <div class="section wenxian1 hide"  style="min-height: 1532px">
+                <h4 style="text-align: left">参考文献</h4>
+                <div>
+                    <ol style="padding-left: 40px; list-style: decimal; font-size: 20px;">
+                        <li style="margin-bottom: 20px;">Vierkötter, A., Schikowski, T., Sugiri, D., Matsui, M. S., Krämer, U., & Krutmann, J. (2015). MMP-1 and-3 promoter variants are indicative of a common susceptibility for skin and lung aging: results from a cohort of elderly women (SALIA). Journal of investigative dermatology, 135(5), 1268-1274.</li>
+                        <li style="margin-bottom: 20px;">Santonocito, C., Scapaticci, M., Penitente, R., Paradisi, A., Capizzi, R., Lanza-Silveri, S., ... & Capoluongo, E. (2012). Polymorphisms in base excision DNA repair genes and association with melanoma risk in a pilot study on Central-South Italian population. Clinica Chimica Acta, 413(19-20), 1519-1524.</li>
+                        <li style="margin-bottom: 20px;">Yang, C. C., Chen, H. I., Chiu, Y. W., Tsai, C. H., & Chuang, H. Y. (2013). Metallothionein 1A polymorphisms may influence urine uric acid and N-acetyl-beta-D-glucosaminidase (NAG) excretion in chronic lead-exposed workers. Toxicology, 306, 68-73.</li>
+                        <li style="margin-bottom: 20px;">Eriksson, N., Macpherson, J. M., Tung, J. Y., Hon, L. S., Naughton, B., Saxonov, S., ... & Mountain, J. (2010). Web-based, participant-driven studies yield novel genetic associations for common traits. PLoS genetics, 6(6), e1000993.</li>
+                        <li style="margin-bottom: 20px;">Liu, F., Visser, M., Duffy, D. L., Hysi, P. G., Jacobs, L. C., Lao, O., ... & Zhu, G. (2015). Genetics of skin color variation in Europeans: genome-wide association studies with functional follow-up. Human genetics, 134(8), 823-835.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!--肿瘤-->
+            <div class="section wenxian4 hide"  style="min-height: 1532px">
+                <h4 style="text-align: left">参考文献</h4>
+                <div>
+                    <ol style="padding-left: 40px; list-style: decimal; font-size: 20px;">
+                        <li style="margin-bottom: 20px;">Functional polymorphisms of matrix metalloproteinase-9 are associated with risk of occurrence and metastasis of lung cancer.</li>
+                        <li style="margin-bottom: 20px;">Helicobacter pylori Infection Synergizes with Three Inflammation-Related Genetic Variants in the GWASs to Increase Risk of Gastric Cancer in a Chinese Population</li>
+                        <li style="margin-bottom: 20px;">A comprehensive analysis of common genetic variation in MUC1, MUC5AC, MUC6 genes and risk of stomach cancer.</li>
+                        <li style="margin-bottom: 20px;">Replication of genome wide association studies on hepatocellular carcinoma susceptibility loci in a Chinese population</li>
+                        <li style="margin-bottom: 20px;">Replication study of PLCE1 and C20orf54 polymorphism and risk of esophageal cancer in a Chinese population.</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study identifies three new susceptibility loci for esophageal squamous-cell carcinoma in Chinese populations</li>
+                        <li style="margin-bottom: 20px;">Association of 10q23 with colorectal cancer in a Chinese population.</li>
+                        <li style="margin-bottom: 20px;">Association analysis of colorectal cancer susceptibility variants with gastric cancer in a Chinese Han population</li>
+                        <li style="margin-bottom: 20px;">Risk of genome-wide association study-identified genetic variants for colorectal cancer in a Chinese population.</li>
+                        <li style="margin-bottom: 20px;">Meta-Analysis of the rs4779584 Polymorphism and Colorectal Cancer Risk</li>
+                        <li style="margin-bottom: 20px;">Association of sequence variants on chromosomes 20, 11, and 5 (20q13.33, 11q23.3, and 5p15.33) with glioma susceptibility in a Chinese population</li>
+                        <li style="margin-bottom: 20px;">Systematic confirmation study of reported prostate cancer risk-associated single nucleotide polymorphisms in Chinese men.</li>
+                        <li style="margin-bottom: 20px;">8q24 and 17q Prostate cancer susceptibility loci in a multiethnic Asian cohort</li>
+                        <li style="margin-bottom: 20px;">Common genetic variants on 8q24 contribute to susceptibility to bladder cancer in a Chinese population.</li>
+                        <li style="margin-bottom: 20px;">A genome-wide association study identifies pancreatic cancer susceptibility loci on chromosomes 13q22.1, 1q32.1 and 5p15.33.</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study of classical Hodgkin lymphoma identifies key regulators of disease susceptibility</li>
+                        <li style="margin-bottom: 20px;">Breast cancer risk assessment with five independent genetic variants and two risk factors in Chinese women.</li>
+                        <li style="margin-bottom: 20px;">Evaluation of breast cancer susceptibility loci in Chinese women</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association and expression quantitative trait loci studies identify multiple susceptibility loci for thyroid cancer</li>
+                        <li style="margin-bottom: 20px;">A genome-wide association study identifies two new cervical cancer susceptibility loci at 4q12 and 17q12</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study identifies a possible susceptibility locus for endometrial cancer.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!--慢病-->
+            <div class="section wenxian2 hide"  style="min-height: 1532px">
+                <h4 style="text-align: left">参考文献</h4>
+                <div>
+                    <ol style="padding-left: 40px; list-style: decimal; font-size: 20px;">
+                        <li style="margin-bottom: 20px;">Genetic variations in MOV10 and CACNB2 are associated with hypertension in a Chinese Han population</li>
+                        <li style="margin-bottom: 20px;">The relationship between angiotensinogen gene polymorphisms and essential hypertension in a Northern Han Chinese population.</li>
+                        <li style="margin-bottom: 20px;">Common polymorphism rs11191548 near the CYP17A1 gene is associated with hypertension and systolic blood pressure in the Han Chinese population.</li>
+                        <li style="margin-bottom: 20px;">ssociation of angiotensin II type 1 receptor gene polymorphism with essential hypertension</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study in Han Chinese identifies four new susceptibility loci for coronary artery disease</li>
+                        <li style="margin-bottom: 20px;">Detection of susceptibility loci on APOA5 and COLEC12 associated with metabolic syndrome using a genome-wide association study in a Taiwanese population</li>
+                        <li style="margin-bottom: 20px;">An APOE haplotype associated with decreased ε4 expression increases the risk of late onset Alzheimer's disease.</li>
+                        <li style="margin-bottom: 20px;">Associations of the ATP-binding cassette transporter A1 R219K polymorphism with HDL-C level and coronary artery disease risk: a meta-analysis.</li>
+                        <li style="margin-bottom: 20px;">Genome-wide association study identifies three novel loci for type 2 diabetes.</li>
+                        <li style="margin-bottom: 20px;">Implication of genetic variants near TCF7L2, SLC30A8, HHEX, CDKAL1, CDKN2A/B, IGF2BP2, and FTO in type 2 diabetes and obesity in 6,719 Asians.</li>
+                        <li style="margin-bottom: 20px;">ABCG2 contributes to the development of gout and hyperuricemia in a genome-wide association study.</li>
+                        <li style="margin-bottom: 20px;">A meta-analysis of the associations between the Q141K and Q126X ABCG2 gene variants and gout risk</li>
+                        <li style="margin-bottom: 20px;">Genetic variation in the ABCG2 gene is associated with gout risk in the Chinese Han population</li>
+                        <li style="margin-bottom: 20px;">Correlation of GLUT9 Polymorphisms With Gout Risk</li>
+                        <li style="margin-bottom: 20px;">Analysis of 17,576 potentially functional SNPs in three case-control studies of myocardial infarction.</li>
+                        <li style="margin-bottom: 20px;">Chromosome 9p21.3 polymorphism in a Chinese Han population is associated with angiographic coronary plaque progression in non-diabetic but not in type 2 diabetic patients.</li>
+                        <li style="margin-bottom: 20px;">MTHFR rs1801133 C>T polymorphism is associated with an increased risk of tetralogy of Fallot</li>
+                        <li style="margin-bottom: 20px;">Are 25 SNPs from the CARDIoGRAM study associated with ischaemic stroke?</li>
+                        <li style="margin-bottom: 20px;">The functional variant rs1048990 in PSMA6 is associated with susceptibility to myocardial infarction in a Chinese population.</li>
+                        <li style="margin-bottom: 20px;">A genome-wide association study identifies PLCL2 and AP3D1-DOT1L-SF3A2 as new susceptibility loci for myocardial infarction in Japanese.</li>
+                        <li style="margin-bottom: 20px;">Risk prediction for sporadic Alzheimer's disease using genetic risk score in the Han Chinese population.</li>
+                        <li style="margin-bottom: 20px;">Genetic association of PICALM polymorphisms with Alzheimer's disease in Han Chinese.</li>
+                        <li style="margin-bottom: 20px;">Analysis of genome-wide association study-linked loci in Parkinson's disease of Mainland China.</li>
+                        <li style="margin-bottom: 20px;">The LRRK2 Gly2385Arg variant is associated with Parkinson's disease: genetic and functional evidence.</li>
+                        <li style="margin-bottom: 20px;">Asthma and bronchodilator responsiveness are associated with polymorphic markers of ARG1, CRHR2 and chromosome 17q21.</li>
+                        <li style="margin-bottom: 20px;">A genome-wide association study identifies two susceptibility loci for duodenal ulcer in the Japanese population</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 </body>
 </html>

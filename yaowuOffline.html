@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>己秘 - 个人基因组检测与分析平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/gerenbaogao.css">
+
+    <!--脚本加载-->
+    <script src="js/config.js"></script>
+    <style type="text/css">
+	    .container {
+            width: 1200px;
+	    	margin: 0 auto;
+		}
+		.gerenbaogao-wrap {
+   			 padding: 0 0;
+             color: #000000;
+   			 background: #FFFFFF;
+    	}
+		.gerenbaogao-wrap .container{
+			padding: 0 0;
+		}
+		
+		.gerenbaogao-wrap .panel .section {
+   			 border:0;
+   			 margin-bottom: 0px;
+   			 background: #FFFFFF;
+		}
+        .gerenbaogao-wrap .panel .section p{
+            color: #000000;
+        }
+
+		.gao {
+		    color: #F25484;
+		}
+		
+		.zhong {
+   			 color: #4FB1F7;
+		}
+		
+		.di {
+    		color: #228B22;
+		}
+
+		.gerenbaogao-wrap .panel .baogao-result .result p.di {
+		    color: #228B22;
+		}
+
+        /*.gerenbaogao-wrap .section.cover{*/
+       		/*min-height: 1532px;*/
+            /*text-align: center;*/
+            /*background: url("images/r_cover.jpg") no-repeat center;*/
+            /*background-size: 100% 100%*/
+        /*}*/
+        /*.cover h3{ font-weight: 800 !important;}*/
+        .gerenbaogao-wrap .section.cover{ height: 1682px; overflow: hidden; position: relative; background: #FFFFFF;}
+        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 355px; left: 200px; width: 212px; font-size: 20px;}
+        .gerenbaogao-wrap .section.cover .title{ margin: 238px auto 0; width: 800px; font-size: 64px;}
+        .gerenbaogao-wrap .section.cover .title .h2{ text-align: right; font-size: 48px;}
+
+        
+        .gerenbaogao-wrap .panel .section h3 {
+    		font-size: 70px;
+		 }
+
+		.gerenbaogao-wrap .panel .section h4 {
+		    padding: 40px 0 20px;
+		    font-size: 28px;
+		    font-weight: 500;
+		    color: #000000;
+		    text-align: center;
+		}
+
+        .gerenbaogao-wrap .panel .testbox{
+            margin: 30px 0 0;
+        }
+		.gerenbaogao-wrap .panel .testbox .testlist {
+		    font-size: 20px;
+            color: #000000;
+	    }
+
+        .gerenbaogao-wrap .panel .baogao-result{
+            margin: 0;
+        }
+
+		.gerenbaogao-wrap .panel .baogao-result .result p {
+		    font-size: 20px;
+		}
+
+		.gerenbaogao-wrap .panel .testbox h5 {
+   			 font-size: 24px;
+		}
+		
+		 .gerenbaogao-wrap .panel .section p {
+   			 font-size: 20px;
+   			 line-height: 35px;
+             margin-bottom: 13px;
+		 }
+
+         /*.cover #userName{ color: #4fb1f7;}*/
+         table{ margin: 0 auto;}
+        .logo{ margin-bottom: 200px; text-align: left;}
+        .logo img{ width: 140px;}
+
+    </style>
+    <script type="text/javascript">
+    var userSampleOfflineId = GetQueryString("reportId");
+
+    $(function () {
+        if(!userSampleOfflineId){
+        	alert("参数错误，请联系管理员");
+            return;
+        }
+        getReportInfo(userSampleOfflineId);
+    })
+
+    function getReportInfo(userSampleOfflineId) {
+        var params = {
+            "method": "getDetectItemList",
+            "userid": "",
+            "token": "",
+            "params": {
+                "userSampleOfflineId": userSampleOfflineId
+            }
+        };
+
+        userSampleHttp(params,function (status,re) {
+            if(status != "SUCCESS"){
+                erroMsg(re.status.message);
+                return;
+            }
+            $(".cover").css("background-image","url('images/cover_ss.png')");
+            //绑定参数
+            replaceReortInfo(re.result);
+        });
+    }
+    
+    function replaceReortInfo(data){
+    	$("#userName").html(data.name);//姓名
+    	$("#sampleCode").html(data.sampleCode);//样本编号
+    	$("#createTime").html(data.createTime);//创建时间
+    	
+    	//项目报告列表
+    	var resultStr="";//报告结果信息
+    	for(var i=0;i<data.itemList.length;i++){
+    		var goodsHeight="min-height: 1532px;";
+    		var itemName=data.itemList[i].name;
+    		if("双氯芬酸"==itemName||"羟考酮"==itemName||"异烟肼"==itemName||"伏立康唑"==itemName||"雷贝拉唑"==itemName||"华法林"==itemName||"氯吡格雷"==itemName||"氟卡尼"==itemName||"多虑平"==itemName||"安定"==itemName||"苯妥英"==itemName||"磺脲类药物"==itemName){
+    			goodsHeight="min-height: 3064px;";
+    		}
+    		resultStr+='<div class="section"  style="'+goodsHeight+'"><h4 class="reportName">'+itemName+'-【基因检测结果】</h4>';
+    		resultStr+='<div class="testbox"><h5>基因检测列表</h5><table class="testlist" cellspacing="0" cellpadding="0" border="0"><tr class="th"><td style="width: 20%">基因</td><td style="width: 20%">位点</td><td style="width: 20%">检测结果</td>';
+    		if("布洛芬"==itemName||"羟考酮"==itemName||"美托洛尔"==itemName||"帕罗西汀"==itemName||"多虑平"==itemName||"托莫西汀"==itemName){
+    			resultStr+='<td style="width: 20%">药效</td><td style="width: 20%">毒性</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].yxItemResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].dxItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}else if("双氯芬酸"==itemName || "苯妥英"==itemName  || "磺脲类药物"==itemName){
+    			resultStr+='<td style="width: 20%">毒性</td><td style="width: 20%">不良反应</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].dxItemResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].dxItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}else if("孟鲁司特"==itemName||"地氯雷他定"==itemName||"布地奈德"==itemName||"利巴韦林"==itemName||"兰索拉唑"==itemName||"奥美拉唑"==itemName||"雷贝拉唑"==itemName||"氯吡格雷"==itemName||"他汀类"==itemName||"安定"==itemName){
+    			resultStr+='<td style="width: 20%">药效</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+'  style="text-align:center;vertical-align:middle;">'+data.itemList[i].yxItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}else if("异烟肼"==itemName || "伏立康唑"==itemName || "氨基糖苷类"==itemName || "罗格列酮"==itemName || "甲氨蝶呤"==itemName){
+    			resultStr+='<td style="width: 20%">毒性</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].dxItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}else if("华法林"==itemName || "他克莫司"==itemName){
+    			resultStr+='<td style="width: 20%">剂量</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].jlItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}else if("氟卡尼"==itemName || "硫唑嘌呤"==itemName){
+    			resultStr+='<td style="width: 20%">剂量</td><td style="width: 20%">毒性</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].jlItemResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].dxItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}else if("拉布立酶"==itemName){
+    			resultStr+='<td style="width: 20%">是否禁用该药</td></tr>';
+    			for(var j=0;j<data.itemList[i].pointResultList.length;j++){
+    				if(j==0){
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td>'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td><td rowspan='+data.itemList[i].pointResultList.length+' style="text-align:center;vertical-align:middle;">'+data.itemList[i].othersItemResult+'</td></tr>';
+    				}else{
+    					resultStr+='<tr><td>'+data.itemList[i].pointResultList[j].geneName+'</td><td>'+data.itemList[i].pointResultList[j].name+'</td><td style="text-align:left">'
+    					+data.itemList[i].pointResultList[j].detectionResult+'</td></tr>';	
+    				}
+        		}
+    		}
+    		
+    		resultStr+='</table></div>';
+    		resultStr+=data.itemList[i].describe;
+    		resultStr+='</div>';
+    	}
+    	$("#itemResultInfo").html(resultStr);
+    	
+    }
+
+    /** 请求 **/
+    function userSampleHttp(data, callback) {
+        var url_userSample = url + "/userSampleOfflineServer!request.action";
+        httpRequest(url_userSample, data, callback);
+    }
+    
+    </script>
+</head>
+<body>
+<div id="content" class="gerenbaogao-wrap">
+    <div class="container clearfix">
+        <div class="panel">
+            <div class="section cover">
+                <div class="info">
+                    <div>样本报告：<span id="sampleCode">S60</span></div>
+                    <div>报告生成：<span id="createTime">2018-08-09</span></div>
+                </div>
+                <div class="title">
+                    <div class="h1" style="font-family: '幼圆';"><span style="font-family: arial;"></span><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
+                    <div class="h2" style="font-family: '幼圆';">基因检测报告<span style="font-family:arial;"></span></div>
+                </div>
+            </div>
+            <div class="section" style="min-height: 1532px;">
+                <p>精准用药提示是基于您个人的基因组数据与目前已知的药物基因组学研究进展，（从基因角度评价您的药物代谢能力）分析您个人药物基因的代谢能力，从而得出的用药指导。由于人群中普遍存在药物代谢基因的差异性，因此一些药物在不同基因型人群中的使用效果大相径庭，有些甚至会造成严重毒副作用。所以，通过个人基因组检测了解自身药物基因组学特点，有助于在您罹患疾病时个性化、针对性地精准用药，以达到最佳治疗效果。</p>
+                <p>此报告仅评价检测范围内的药物基因组学相关位点，不能够完全判断所有位点突变对酶活性的影响程度。因此，在综合出具用药检测结果时，未考虑检测范围外的位点对用药的影响。当用户因携带不同突变对用药的评价结果相悖时，检测结果仅对杂合突变和纯合突变进行权重区分。用户不可依据检测结果自行指导用药，需咨询专业临床医生，结合综合体征等因素决定是否需要在用药时加强监控，对于危险的药物（治疗窗较窄、不良反应严重）可对用户进行针对性临床检查。</p>
+            </div>
+            <div id="itemResultInfo">
+			</div>
+
+            <!--药物-->
+            <div class="section"  style="min-height: 1532px">
+                <h4 style="text-align: left">参考文献</h4>
+                <div>
+                    <ol style="padding-left: 40px; list-style: decimal; font-size: 20px;">
+                        <li style="margin-bottom: 20px;">Genetically mediated interindividual variation in analgesic responses to cyclooxygenase inhibitory drugs.</li>
+                        <li style="margin-bottom: 20px;">Influence of CYP2C9 and CYP2C19 genetic polymorphisms on phenytoin-induced neurological toxicity in Indian epileptic patients.</li>
+                        <li style="margin-bottom: 20px;">Nuclear receptor gene polymorphisms and warfarin dose requirements in the Quebec Warfarin Cohort</li>
+                        <li style="margin-bottom: 20px;">CYP2C9, KCNJ11 and ABCC8 polymorphisms and the response to sulphonylurea treatment in type 2 diabetes patients</li>
+                        <li style="margin-bottom: 20px;">Genetic predisposition to acute gastrointestinal bleeding after NSAIDs use</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
