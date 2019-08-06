@@ -16,8 +16,8 @@ table tr td:nth-child(2) span{ display: inline-block; margin-right: 18px; width:
 .gao{ color: #DB4E61;}
 
 .cover{ position: relative; background: url("../images/offline_cover.png") no-repeat scroll center;}
-.cover .info{ position: absolute; top: 345px; left: 220px; width: 212px; font-size: 20px;}
-.cover .title{ margin: 238px auto 0; width: 760px; font-size: 64px;}
+.cover .info{ position: absolute; top: 270px; left: 220px; font-size: 20px;}
+.cover .title{ margin: 190px auto 0; width: 760px; font-size: 64px;}
 .cover .title .h2{ text-align: right; font-size: 48px;}
 
 .page1{ background: #C95866 url("../images/offline_page1.png") no-repeat scroll center;}

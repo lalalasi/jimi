@@ -32,6 +32,11 @@ function replaceReortInfo(data){
     $("#userName").html(data.name);//姓名
     $("#sampleCode").html(data.sampleCode);//样本编号
     $("#createTime").html(data.createTime);//创建时间
+    if(data.phone){
+        $("#phone").html(data.phone);//创建时间
+    } else {
+        $(".phone").addClass('hide');
+    }
 
     //总揽
     data.itemList.forEach(function(item){

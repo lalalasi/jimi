@@ -59,8 +59,8 @@
         /*}*/
         /*.cover h3{ font-weight: 800 !important;}*/
         .gerenbaogao-wrap .section.cover{ height: 1682px; overflow: hidden; position: relative; background: #FFFFFF;}
-        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 355px; left: 200px; width: 212px; font-size: 20px;}
-        .gerenbaogao-wrap .section.cover .title{ margin: 238px auto 0; width: 800px; font-size: 64px;}
+        .gerenbaogao-wrap .section.cover .info{ position: absolute; top: 270px; left: 200px; font-size: 20px;}
+        .gerenbaogao-wrap .section.cover .title{ margin: 160px auto 0; width: 800px; font-size: 64px;}
         .gerenbaogao-wrap .section.cover .title .h2{ text-align: right; font-size: 48px;}
 
         
@@ -143,7 +143,13 @@
     function replaceReortInfo(data){
     	$("#userName").html(data.name);//姓名
     	$("#sampleCode").html(data.sampleCode);//样本编号
-    	$("#createTime").html(data.createTime);//创建时间
+        $("#createTime").html(data.createTime);//创建时间
+        if(data.phone){
+            $("#phone").html(data.phone);//创建时间
+        } else {
+            $(".phone").addClass('hide');
+        }
+
     	
     	//项目报告列表
     	var goodsId=data.goodsId;
@@ -163,8 +169,8 @@
     	}else if(goodsId==3){
             goodsStr+='<td style="width: 50%">项目</td><td style="width: 50%">营养需求</td> </tr>';
         }else{
-    		goodsStr+='<td style="width: 50%">项目</td><td style="width: 50%">代谢能力</td> </tr>';
-    	}
+            goodsStr+='<td style="width: 50%">项目</td><td style="width: 50%">患病风险</td> </tr>';
+        }
     	for(var i=0;i<data.itemList.length;i++){
     		var itemResult=data.itemList[i].itemResult;
     		var resultClass='di';
@@ -378,27 +384,23 @@
         <div class="panel">
             <div class="section cover">
                 <div class="info">
-                    <div>样本报告：<span id="sampleCode">S60</span></div>
-                    <div>报告生成：<span id="createTime">2018-08-09</span></div>
+                    <div>报告编号：<span id="sampleCode"></span></div>
+                    <div>报告日期：<span id="createTime"></span></div>
+                    <div class="phone">手机号码：<span id="phone"></span></div>
                 </div>
                 <div class="title">
-                    <div class="h1" style="font-family: '幼圆';"><span style="font-family: arial;"></span><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
-                    <div class="h2" style="font-family: '幼圆';">基因检测报告<span style="font-family:arial;"></span></div>
+                    <div class="h1" style="font-family: '幼圆';"><span id="userName" style="font-family: '幼圆';">XXX</span><span id="reportType" style="font-family: '幼圆';"></span></div>
+                    <div class="h2" style="font-family: '幼圆';">基因检测报告</div>
                 </div>
             </div>
-            <!--<div class="section cover">-->
-                <!--<div class="logo"><img src="images/logo.png"></div>-->
-           	    <!--<h3><span id="userName"></span>&nbsp;&nbsp;基因检测报告</h3>-->
-                <!--<p>样本编号：<span id="sampleCode"></span>&nbsp;&nbsp;&nbsp;&nbsp;报告日期：<span id="createTime"></span></p>-->
-            <!--</div>-->
             <div class="section" style="min-height: 1532px;">
             	<h4 class="reportName">卷首语</h4>
                 <p>尊敬的 先生/女士：</p>
-                <p>这是最好的时代！己秘诚挚地为您献上现代科学赐予我们的最好礼物。2001年2月1 2日，由包括中国在内的6国的科学家共同公布了人类基因组图谱及初步分析结果。自200多万年前人类诞生以来，我们首次能在分子水平上解释生命的奥秘。人类基因组图谱的解读，预示着人手一份“人体生命说明书”的个性化医疗时代已经到来，我们将越来越了解人类自身之谜。</p>
+                <p>这是最好的时代！我们诚挚地为您献上现代科学赐予我们的最好礼物。2001年2月1 2日，由包括中国在内的6国的科学家共同公布了人类基因组图谱及初步分析结果。自200多万年前人类诞生以来，我们首次能在分子水平上解释生命的奥秘。人类基因组图谱的解读，预示着人手一份“人体生命说明书”的个性化医疗时代已经到来，我们将越来越了解人类自身之谜。</p>
              	<p>基因信息与健康息息相关，诺贝尔医学奖获得者利根川进博士曾指出：人类除外伤以外的所有疾病都与基因有关！疾病或体质特征是由内因（基因）与外因（环境和习惯）共同作用的结果</p>
-             	<p>己秘始终致力于将前沿的生物技术运用于疾病的预防、诊断和治疗，提高全球个性化医疗水平。健康管理类基因检测旨在从遗传的角度解读基因数据，预测疾病风险和营养代谢能力，从而指导健康的生活方式，提升生活品质。拿喝酒举例来说，为什么有人千杯不醉，而有人一滴就倒？很大程度上取决于酒精代谢的基因不同，从而导致酒精代谢能力不同。而这样的例子仅仅是人类2万多个基因中的1个。现代科学研究表明人与人之间基因的差异不到0.1%，而正是这不到0.1%的差异造就了你我的与众不同。</p>
+             	<p>我们始终致力于将前沿的生物技术运用于疾病的预防、诊断和治疗，提高全球个性化医疗水平。健康管理类基因检测旨在从遗传的角度解读基因数据，预测疾病风险和营养代谢能力，从而指导健康的生活方式，提升生活品质。拿喝酒举例来说，为什么有人千杯不醉，而有人一滴就倒？很大程度上取决于酒精代谢的基因不同，从而导致酒精代谢能力不同。而这样的例子仅仅是人类2万多个基因中的1个。现代科学研究表明人与人之间基因的差异不到0.1%，而正是这不到0.1%的差异造就了你我的与众不同。</p>
              	<p>对生命的探索是人类永恒的主题。伟大的古希腊哲学家亚里士多德曾说：智者始于自知。当我的基因密码被破译的时候，当我的巴特农神庙建立起来的时候，我从这遥远的地方也能感受到他的辉煌。</p>
-             	<p>未来已来。在这个风起云涌，激动人心的时代里己秘将与您一路同行！</p>
+             	<p>未来已来。在这个风起云涌，激动人心的时代里我们将与您一路同行！</p>
             </div>
             <div class="section" style="min-height: 1532px;">
             	<h4 class="reportName">Preface</h4>
